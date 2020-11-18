@@ -1,0 +1,379 @@
+* Config :ignore:
+#+BEGIN_SRC emacs-lisp :exports none  :results none :eval always
+(add-to-list 'org-latex-classes
+             '("altacv" "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \\setmainfont{Roboto Slab}
+  \\setsansfont{Lato}
+  \\renewcommand{\\familydefault}{\\sfdefault}
+\\else
+  % If using pdflatex:
+  \\usepackage[rm]{roboto}
+  \\usepackage[defaultsans]{lato}
+  % \\usepackage{sourcesanspro}
+  \\renewcommand{\\familydefault}{\\sfdefault}
+\\fi
+
+% Change the colours if you want to
+\\definecolor{SlateGrey}{HTML}{2E2E2E}
+\\definecolor{LightGrey}{HTML}{666666}
+\\definecolor{DarkPastelRed}{HTML}{450808}
+\\definecolor{PastelRed}{HTML}{8F0D0D}
+\\definecolor{GoldenEarth}{HTML}{E7D192}
+\\colorlet{name}{black}
+\\colorlet{tagline}{PastelRed}
+\\colorlet{heading}{DarkPastelRed}
+\\colorlet{headingrule}{GoldenEarth}
+\\colorlet{subheading}{PastelRed}
+\\colorlet{accent}{PastelRed}
+\\colorlet{emphasis}{SlateGrey}
+\\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\\renewcommand{\\namefont}{\\Huge\\rmfamily\\bfseries}
+\\renewcommand{\\personalinfofont}{\\footnotesize}
+\\renewcommand{\\cvsectionfont}{\\LARGE\\rmfamily\\bfseries}
+\\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\\renewcommand{\\itemmarker}{{\\small\\textbullet}}
+\\renewcommand{\\ratingmarker}{\\faCircle}
+"
+
+
+               ("\\cvsection{%s}" . "\\cvsection*{%s}")
+               ("\\cvevent{%s}" . "\\cvevent*{%s}")))
+;; ("\\section{%s}" . "\\section*{%s}")
+;; ("\\subsection{%s}" . "\\subsection*{%s}")
+;; ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;; ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;; ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-default-packages-alist
+      '(("utf8" "inputenc"  t)
+        (""     "minted"   t)
+        (""     "rotating"  nil)
+        ("normalem" "ulem"  t)
+        (""     "mathtools"   t)
+        ))
+#+END_SRC
+#+AUTHOR: Aidan Scannell
+#+LATEX_CLASS: altacv
+#+LATEX_HEADER: \addbibresource{aidan.bib}
+#+EXPORT_FILE_NAME: ./resume.pdf
+#+OPTIONS: toc:nil \n:nil title:nil H:4
+* Macros :ignore:
+#+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+#+MACRO: cvtag \cvtag{$1}
+#+MACRO: divider \par\divider
+* Header :ignore:
+
+** Photo & Tagline :ignore:
+#+begin_export latex
+\name{Aidan Scannell}
+\photoR{2.8cm}{aidan_portrait.jpeg}
+\tagline{PhD Researcher}
+#+end_export
+
+** Personal Info :ignore:
+#+begin_export latex
+\personalinfo{%
+  \homepage{www.aidanscannell.com}
+  \email{scannell.aidan@gmail.com}
+  \phone{+44 787 558 3912}
+  % \mailaddress{27 Beaumont Street, Bristol, BS5 0TD, UK}
+  \location{Bristol, UK}
+  \github{aidanscannell}
+  \linkedin{aidan-scannell-82522789/}
+  % \twitter{scannell_aidan}
+  % \printinfo{sourcerer.io}{sourcerer.io/aidanscannell}[https://sourcerer.io/aidanscannell]
+  % \printinfo{}{sourcerer.io/aidanscannell}[https://sourcerer.io/aidanscannell]
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+\makecvheader
+#+end_export
+
+* Column 1 :ignore:
+# Set the left/right column width ratio to 6:4.
+#+begin_export latex
+\columnratio{0.6}
+#+end_export
+
+# Start a 2-column paracol. Both the left and right columns will automatically
+# break across pages if things get too long.
+#+begin_export latex
+\begin{paracol}{2}
+#+end_export
+
+** Experience
+*** PhD Researcher :ignore:
+{{{cvevent(PhD Researcher, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
+
+Researching data-efficient learning for the control of robotic systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
+
+{{{cvtag(Probabilistic modelling)}}}
+{{{cvtag(Gaussian processes)}}}
+{{{cvtag(Variational inference)}}}
+{{{cvtag(Model-based reinforcement learning)}}}
+{{{cvtag(Optimal control)}}}
+
+*** Teaching Assistant :ignore:
+{{{divider}}}
+{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
+
+Alongside my PhD I have assisted the teaching of
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
+
+** Projects
+*** SVGP :ignore:
+
+{{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Bristol\, UK)}}}
+
+- Improving scalability in the Mixtures of Gaussian Process Experts model with Gaussian process based gating networks.
+- Variational inference based on sparse GP approximations.
+- \faGithub [[https://github.com/aidanscannell/mogpe][aidanscannell/mogpe]]
+
+{{{cvtag(GPflow)}}}
+{{{cvtag(TensorFlow)}}}
+{{{cvtag(Gaussian processes)}}}
+{{{cvtag(Variational inference)}}}
+
+*** Traj Opt :ignore:
+{{{divider}}}
+
+{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - Ongoing, Bristol\, UK)}}}
+
+- Learning multimodal probabilistic transition dynamics.
+- Trajectory optimisation that finds trajectories that 1) remain in a desired dynamics mode 2) whilst avoiding regions of the dynamics with high epistemic uncertainty.
+- \faGithub [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
+
+{{{cvtag(JAX)}}}
+{{{cvtag(Probabilistic geometries)}}}
+{{{cvtag(Optimal control)}}}
+
+
+
+** A day of my life :ignore:
+# #+begin_export latex
+# % \medskip
+
+# % \cvsection{A Day of My Life}
+
+# % % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+# % % \wheelchart{outer radius}{inner radius}{
+# % % comma-separated list of value/text width/color/detail}
+# % \wheelchart{1.5cm}{0.5cm}{%
+# %   6/8em/accent!30/{Sleep,\\beautiful sleep},
+# %   3/8em/accent!40/Hopeful novelist by night,
+# %   8/8em/accent!60/Daytime job,
+# %   2/10em/accent/Sports and relaxation,
+# %   5/6em/accent!20/Spending time with family
+# % }
+
+# % % use ONLY \newpage if you want to force a page break for
+# % % ONLY the current column
+# % \newpage
+# #+end_export
+
+# ** Publications :ignore:
+# #+begin_export latex
+# \cvsection{Publications}
+# \nocite{*}
+# % \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+# % \divider
+# % \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+# % \divider
+# % \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+# #+end_export
+
+** Volunteering
+*** Code Club :ignore:
+
+{{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Bristol\, UK)}}}
+
+I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Libraries to set up and run a Code Club for young people aged 9-13 at Junction 3 Library in Easton, Bristol.
+
+{{{cvtag(Leadership)}}}
+{{{cvtag(Teaching)}}}
+
+*** Drivetrain :ignore:
+{{{divider}}}
+
+{{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Bristol\, UK)}}}
+# \cvevent{Technical Lead (Drivetrain)}{\href{https://www.beracing.co.uk/}{Formula Student}}{Jan 2015 - Jan 2016}{Bristol, UK}
+
+Each year, as part of Formula Student, students design, build and race a single seat race car.
+- Finished 2nd in the National Class 2 competition in 2013/2014, I was then selected as the Drivetrain lead.
+- This role improved my communication skills as I was leading weekly presentations.
+- I developed my leadership skills through setting realistic objectives, effectively allocating work to the appropriate team members and monitoring outcomes.
+
+{{{cvtag(Leadership)}}}
+{{{cvtag(Teaching)}}}
+
+
+
+*** Snowboard Captain :ignore:
+{{{divider}}}
+
+{{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Bristol\, UK)}}}
+
+- Organised multiple weekly training sessions, demonstrating my ability to plan and run events smoothly.
+- Negotiated competitive prices for a growing member base within an inherently expensive sport.
+- Responsible for aiding the smooth running of the club and helping to organise the annual university ski trip, with circa 1500 participants, working under pressure to manage people in high stress situations.
+- Awarded the ‘Team of the Year’ award and full colours for my performances and contributions to the sport.
+
+{{{cvtag(Teamwork)}}}
+{{{cvtag(Leadership)}}}
+
+
+* Column 2 :ignore:
+#+begin_export latex
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+#+end_export
+
+** Skills
+#+begin_export latex
+\cvtag{Python}
+\cvtag{NumPy}
+\cvtag{SciPy}
+\cvtag{Matplotlib}
+\cvtag{GPflow}
+\cvtag{TensorFlow}
+\cvtag{JAX}
+\cvtag{GPy}
+#+end_export
+
+#+begin_export latex
+\divider\smallskip
+
+\cvtag{Java}
+\cvtag{C++}
+\cvtag{MATLAB}
+\cvtag{ROS}
+#+end_export
+
+#+begin_export latex
+\divider\smallskip
+
+\cvtag{Git/GitHub}
+\cvtag{LaTeX}
+#+end_export
+
+** Education
+#+begin_export latex
+\cvevent{Ph.D.\ in Bayesian Machine Learning for Robotic Control}{University of Bristol}{Sept 2018 - Ongoing}{}
+#+end_export
+
+#+begin_export latex
+\divider
+
+\cvevent{M.Res.\ in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
+Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
+#+end_export
+
+#+begin_export latex
+\divider
+
+\cvevent{M.Eng.\ in Mechanical Engineering}{University of Bristol | First Class Honours}{Sept 2012 -- June 2016}{}
+#+end_export
+
+** My Life Philosophy :ignore:
+#+begin_export latex
+% \cvsection{My Life Philosophy}
+
+% \begin{quote}
+% ``Something smart or heartfelt, preferably in one sentence.''
+% \end{quote}
+#+end_export
+
+# ** Most Proud Of :ignore:
+# #+begin_export latex
+# \cvsection{Most Proud of}
+# #+end_export
+
+# #+begin_export latex
+# \cvachievement{\faTrophy}{Code Club Leader}{Collaborated with Code Club and Bristol Libraries to set up and run a Code Club for 9-13 year olds.}
+# #+end_export
+
+# #+begin_export latex
+# \divider
+
+# \cvachievement{\faHeartbeat}{British University Snowboard Slalom Champion}{Won all national British university slalom competitions in 2017-2018.}
+# #+end_export
+
+** Achievements 
+#+begin_export latex
+\cvachievement{\faTrophy}{Full Sporting Colours}{Awarded full colours for outstanding achievement in snowboarding.}
+#+end_export
+
+#+begin_export latex
+\divider
+
+\cvachievement{\faCertificate}{Starting To Teach}{Acquired the knowledge and skills to establish myself as a confident, enthusiastic and effective teacher who is able to engage, encourage and develop students' learning}
+#+end_export
+
+#+begin_export latex
+\divider
+
+\cvachievement{\faTrophy}{Bristol Plus Award}{For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23000 achieved this awards per annum.}
+#+end_export
+
+** Languages :ignore:
+#+begin_export latex
+% \cvsection{Languages}
+
+% \cvskill{English}{5}
+% \divider
+
+% \cvskill{Spanish}{4}
+% \divider
+
+% \cvskill{German}{3}
+
+% %% Yeah I didn't spend too much time making all the
+% %% spacing consistent... sorry. Use \smallskip, \medskip,
+% %% \bigskip, \vpsace etc to make ajustments.
+% \medskip
+#+end_export
+
+** Referees
+#+begin_export latex
+% \cvref{name}{email}{mailing address}
+\cvref{Prof.\ Arthur Richards}{University of Bristol}{Arthur.Richards@bristol.ac.uk}
+% {Address Line 1\\Address line 2}
+\divider
+\cvref{Dr.\ Carl Henrik Ek}{University of Cambridge}{che29@cam.ac.uk}
+% {Address Line 1\\Address line 2}
+#+end_export
+
+* End Doc :ignore:
+#+begin_export latex
+\end{paracol}
+\end{document}
+#+end_export
+
