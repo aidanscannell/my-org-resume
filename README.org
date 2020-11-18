@@ -1,0 +1,27 @@
+#+TITLE: Readme
+
+* Config
+org-latex-classes
+run =C-c C-c LatexMK
+* Macros
+#+begin_src org
+#+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+#+MACRO: cvtag \cvtag{$1}
+#+MACRO: divider \par\divider
+#+end_src
+
+#+RESULTS:
+: #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+: #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+: #+MACRO: cvtag \cvtag{$1}
+: #+MACRO: divider \par\divider
+
+* Bibliography
+* Org-mode
+Headings (Tab through them)
+Lists
+Links 
+* Tags
+- ignore
+- noexport
