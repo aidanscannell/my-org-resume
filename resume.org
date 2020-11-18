@@ -1,5 +1,6 @@
 * Config :ignore:
 #+BEGIN_SRC emacs-lisp :exports none  :results none :eval always
+(setq org-latex-logfiles-extensions (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf")))
 (add-to-list 'org-latex-classes
              '("altacv" "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
