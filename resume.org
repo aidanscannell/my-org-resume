@@ -73,13 +73,15 @@
 #+AUTHOR: Aidan Scannell
 #+LATEX_CLASS: altacv
 #+LATEX_HEADER: \addbibresource{aidan.bib}
+#+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+EXPORT_FILE_NAME: ./resume.pdf
 #+OPTIONS: toc:nil \n:nil title:nil H:4
 * Macros :ignore:
 #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
 #+MACRO: cvtag \cvtag{$1}
-#+MACRO: divider \par\divider
+#+MACRO: divider \divider
+#+MACRO: divider2 \par\divider
 * Header :ignore:
 
 ** Photo & Tagline :ignore:
@@ -116,17 +118,9 @@
 #+end_export
 
 * Column 1 :ignore:
-# Set the left/right column width ratio to 6:4.
-#+begin_export latex
-\columnratio{0.6}
-#+end_export
-
-# Start a 2-column paracol. Both the left and right columns will automatically
-# break across pages if things get too long.
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
-
 ** Experience
 *** PhD Researcher :ignore:
 {{{cvevent(PhD Researcher, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
@@ -140,13 +134,17 @@ Researching data-efficient learning for the control of robotic systems. EPSRC Ce
 {{{cvtag(Optimal control)}}}
 
 *** Teaching Assistant :ignore:
-{{{divider}}}
+{{{divider2}}}
+
 {{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
 
-Alongside my PhD I have assisted the teaching of
+Alongside my PhD I have assisted the teaching of,
 - [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
 - [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
 - [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
+
+{{{cvtag(Communication)}}}
+{{{cvtag(Active Listening)}}}
 
 ** Projects
 *** SVGP :ignore:
@@ -174,8 +172,6 @@ Alongside my PhD I have assisted the teaching of
 {{{cvtag(JAX)}}}
 {{{cvtag(Probabilistic geometries)}}}
 {{{cvtag(Optimal control)}}}
-
-
 
 ** A day of my life :ignore:
 # #+begin_export latex
@@ -210,8 +206,18 @@ Alongside my PhD I have assisted the teaching of
 # % \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
 # #+end_export
 
+
+\newpage
 ** Volunteering
+*** FARSCOPE Course Rep :ignore:
+{{{cvevent(Cohort Year Rep, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
+
+
+{{{cvtag(Communication)}}}
+{{{cvtag(Interpersonal Skills)}}}
+
 *** Code Club :ignore:
+{{{divider2}}}
 
 {{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Bristol\, UK)}}}
 
@@ -221,23 +227,21 @@ I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Librarie
 {{{cvtag(Teaching)}}}
 
 *** Drivetrain :ignore:
-{{{divider}}}
+{{{divider2}}}
 
 {{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Bristol\, UK)}}}
-# \cvevent{Technical Lead (Drivetrain)}{\href{https://www.beracing.co.uk/}{Formula Student}}{Jan 2015 - Jan 2016}{Bristol, UK}
 
 Each year, as part of Formula Student, students design, build and race a single seat race car.
 - Finished 2nd in the National Class 2 competition in 2013/2014, I was then selected as the Drivetrain lead.
 - This role improved my communication skills as I was leading weekly presentations.
 - I developed my leadership skills through setting realistic objectives, effectively allocating work to the appropriate team members and monitoring outcomes.
 
+{{{cvtag(Teamwork)}}}
 {{{cvtag(Leadership)}}}
-{{{cvtag(Teaching)}}}
-
-
+{{{cvtag(Time Management)}}}
 
 *** Snowboard Captain :ignore:
-{{{divider}}}
+{{{divider2}}}
 
 {{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Bristol\, UK)}}}
 
@@ -248,60 +252,50 @@ Each year, as part of Formula Student, students design, build and race a single 
 
 {{{cvtag(Teamwork)}}}
 {{{cvtag(Leadership)}}}
-
+{{{cvtag(Time Management)}}}
 
 * Column 2 :ignore:
+** Switch Column :ignore:
+# Switch to the right column - will automatically move to the next page.
 #+begin_export latex
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
 \switchcolumn
 #+end_export
 
 ** Skills
-#+begin_export latex
-\cvtag{Python}
-\cvtag{NumPy}
-\cvtag{SciPy}
-\cvtag{Matplotlib}
-\cvtag{GPflow}
-\cvtag{TensorFlow}
-\cvtag{JAX}
-\cvtag{GPy}
-#+end_export
+{{{cvtag(Python)}}}
+{{{cvtag(NumPy)}}}
+{{{cvtag(SciPy)}}}
+{{{cvtag(Matplotlib)}}}
+{{{cvtag(GPflow)}}}
+{{{cvtag(TensorFlow)}}}
+{{{cvtag(JAX)}}}
+{{{cvtag(GPy)}}}
 
-#+begin_export latex
-\divider\smallskip
+{{{divider}}}
 
-\cvtag{Java}
-\cvtag{C++}
-\cvtag{MATLAB}
-\cvtag{ROS}
-#+end_export
+{{{cvtag(Java)}}}
+{{{cvtag(C++)}}}
+{{{cvtag(MATLAB)}}}
+{{{cvtag(ROS)}}}
 
-#+begin_export latex
-\divider\smallskip
+{{{divider}}}
 
-\cvtag{Git/GitHub}
-\cvtag{LaTeX}
-#+end_export
+
+{{{cvtag(Git/GitHub)}}}
+{{{cvtag(LaTeX)}}}
+{{{cvtag(Org-mode)}}}
 
 ** Education
-#+begin_export latex
-\cvevent{Ph.D.\ in Bayesian Machine Learning for Robotic Control}{University of Bristol}{Sept 2018 - Ongoing}{}
-#+end_export
+{{{cvevent(Ph.D.\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
 
-#+begin_export latex
-\divider
+{{{divider}}}
 
-\cvevent{M.Res.\ in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
+{{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
 Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
-#+end_export
 
-#+begin_export latex
-\divider
+{{{divider}}}
 
-\cvevent{M.Eng.\ in Mechanical Engineering}{University of Bristol | First Class Honours}{Sept 2012 -- June 2016}{}
-#+end_export
+{{{cvevent(M.Eng.\ in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
 
 ** My Life Philosophy :ignore:
 #+begin_export latex
@@ -328,21 +322,15 @@ Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
 # #+end_export
 
 ** Achievements 
-#+begin_export latex
-\cvachievement{\faTrophy}{Full Sporting Colours}{Awarded full colours for outstanding achievement in snowboarding.}
-#+end_export
+{{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding.)}}}
 
-#+begin_export latex
-\divider
+{{{divider}}}
 
-\cvachievement{\faCertificate}{Starting To Teach}{Acquired the knowledge and skills to establish myself as a confident, enthusiastic and effective teacher who is able to engage, encourage and develop students' learning}
-#+end_export
+{{{cvachievement(\faCertificate, Starting To Teach, Acquired the knowledge and skills to establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
 
-#+begin_export latex
-\divider
+{{{divider}}}
 
-\cvachievement{\faTrophy}{Bristol Plus Award}{For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23000 achieved this awards per annum.}
-#+end_export
+{{{cvachievement(\faTrophy,Bristol Plus Award, For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23000 achieved this awards per annum.)}}}
 
 ** Languages :ignore:
 #+begin_export latex
@@ -362,6 +350,7 @@ Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
 % \medskip
 #+end_export
 
+\newpage
 ** Referees
 #+begin_export latex
 % \cvref{name}{email}{mailing address}
