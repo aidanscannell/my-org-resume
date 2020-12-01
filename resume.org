@@ -86,8 +86,19 @@
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
-
 ** Experience
+*** Teaching Assistant :ignore:
+{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
+
+Alongside my PhD I have assisted the teaching of,
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
+
+{{{cvtag(Communication)}}}
+{{{cvtag(Active Listening)}}}
+
+{{{divider2}}}
 *** PhD Researcher :ignore:
 {{{cvevent(PhD Researcher, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
 
@@ -99,18 +110,31 @@ Researching data-efficient learning for the control of robotic systems. EPSRC Ce
 {{{cvtag(Model-based reinforcement learning)}}}
 {{{cvtag(Optimal control)}}}
 
-*** Teaching Assistant :ignore:
+*** Mott MacDonald :ignore:noexport:
 {{{divider2}}}
 
-{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
+{{{cvevent(Mechanical Engineer Intern,Mott MacDonald,June 2015 -- August 2015, London\, UK)}}}
 
-Alongside my PhD I have assisted the teaching of,
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
+# I worked as a mechanical engineer within the building services division where I developed my
+# teamwork skills and learned the importance of knowledge management.
+# I was in charge of optimising the heating, ventilation and air-conditioning of a building a
+# Hackney Wick underground station.
+# I met with external architects to communicate our ideas and I personally overcame logistical issues
+# and improved a systems efficiency, resulting in the designs approval.
+# I consistently met deadlines whilst working under pressure and was offered future employment.
+# This internship strengthened my desire to move away from engineering and pursue a research driven
+# career involving mathematics and programming.
 
-{{{cvtag(Communication)}}}
-{{{cvtag(Active Listening)}}}
+- Developed teamwork skills, learning the importance of knowledge management within a team.
+- Overcame logistical issues and improved a system’s efficiency, resulting in the design’s approval.
+- Consistently met deadlines whilst working under pressure.
+- Conducted a feasibility study and estimated project costs that informed subsequent action.
+- Located an error and proposed a solution. Communicating this to relevant managers resulted in its successful implementation.
+- Mott MacDonald offered me future employment following my summer placement.
+  
+{{{cvtag(Engineering)}}}
+{{{cvtag(Teamwork)}}}
+{{{cvtag(Industry)}}}
 
 ** Projects
 *** SVGP :ignore:
@@ -132,13 +156,12 @@ Alongside my PhD I have assisted the teaching of,
 {{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - Ongoing, Bristol\, UK)}}}
 
 - Learning multimodal probabilistic transition dynamics.
-- Trajectory optimisation that finds trajectories that 1) remain in a desired dynamics mode 2) whilst avoiding regions of the dynamics with high epistemic uncertainty.
+- Finds trajectories that 1) remain in a desired dynamics mode 2) avoid regions of the dynamics with high epistemic uncertainty.
 - \faGithub [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
 
 {{{cvtag(JAX)}}}
 {{{cvtag(Probabilistic geometries)}}}
 {{{cvtag(Optimal control)}}}
-
 ** A day of my life :noexport:
 # #+begin_export latex
 # % \medskip
@@ -171,17 +194,21 @@ Alongside my PhD I have assisted the teaching of,
 \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
 #+end_export
 
-** Volunteering
-*** FARSCOPE Course Rep :ignore:
-{{{cvevent(Cohort Year Rep, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
+** Newpage :ignore:
+#+BEGIN_EXPORT latex
+\newpage
+#+END_EXPORT
 
+** Volunteering
+*** FARSCOPE Course Rep :ignore:noexport:
+{{{cvevent(Cohort Year Rep, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
 
 {{{cvtag(Communication)}}}
 {{{cvtag(Interpersonal Skills)}}}
 
-*** Code Club :ignore:
 {{{divider2}}}
 
+*** Code Club :ignore:
 {{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Bristol\, UK)}}}
 
 I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Libraries to set up and run a Code Club for young people aged 9-13 at Junction 3 Library in Easton, Bristol.
@@ -225,12 +252,12 @@ Each year, as part of Formula Student, students design, build and race a single 
 
 ** Skills
 {{{cvtag(Python)}}}
+{{{cvtag(TensorFlow)}}}
+{{{cvtag(GPflow)}}}
+{{{cvtag(JAX)}}}
 {{{cvtag(NumPy)}}}
 {{{cvtag(SciPy)}}}
 {{{cvtag(Matplotlib)}}}
-{{{cvtag(GPflow)}}}
-{{{cvtag(TensorFlow)}}}
-{{{cvtag(JAX)}}}
 {{{cvtag(GPy)}}}
 
 {{{divider}}}
@@ -252,12 +279,16 @@ Each year, as part of Formula Student, students design, build and race a single 
 
 {{{divider}}}
 
-{{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
-Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
+# {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
+{{{cvevent(M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
+- First Class Honours \\
+- \faBook [[https://www.aidanscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
 
 {{{divider}}}
 
 {{{cvevent(M.Eng.\ in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
+- First Class Honours \\
+- Graduated in top 10% of cohort
 
 ** My Life Philosophy :noexport:
 #+begin_export latex
@@ -313,6 +344,11 @@ Thesis title: Extending BDI Agents to Model and Reason with Uncertainty \\
 #+end_export
 
 \newpage
+** Newpage :ignore:
+#+BEGIN_EXPORT latex
+\newpage
+#+END_EXPORT
+
 ** Referees
 #+begin_export latex
 % \cvref{name}{email}{mailing address}
