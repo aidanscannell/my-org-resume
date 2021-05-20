@@ -48,8 +48,12 @@
         ))
 #+END_SRC
 #+LATEX_CLASS: altacv
-#+LATEX_HEADER: \addbibresource{aidan.bib}
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
+#+LATEX_HEADER: \usepackage[bottom]{footmisc}
+*** Bibliograpny
+#+LATEX_HEADER: \addbibresource{aidan.bib}
+# #+LATEX_HEADER: \usepackage[citestyle=numeric-comp, maxcitenames=1, maxbibnames=4, doi=false, isbn=false, eprint=true, backend=bibtex, hyperref=true, url=false, natbib=true]{biblatex}
+#+LATEX_HEADER: \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
 
 ** Exporter Settings
 #+AUTHOR: Aidan Scannell
@@ -86,29 +90,40 @@
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
+** Personal Statement :ignore:
+#+begin_export latex
+ \begin{quote}
+ ``I am an aspiring researcher with interests at the intersection of probabilistic machine learning and control theory. I am particularly interested in uncertainty quantification and as a result, a great deal of my work focuses on Bayesian non-parametric methods, specifically Gaussian processes and variational inference.''
+ \end{quote}
+#+end_export
 ** Experience
-*** Teaching Assistant :ignore:
-{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
-
-Alongside my PhD I have assisted the teaching of,
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
-
-{{{cvtag(Communication)}}}
-{{{cvtag(Active Listening)}}}
-
-{{{divider2}}}
 *** PhD Researcher :ignore:
 {{{cvevent(PhD Researcher, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
 
-Researching data-efficient learning for the control of robotic systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
+# Researching methods for probabilistic inference and control in multimodal dynamical systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
+Researching methods for data-efficient learning and control in multimodal dynamical systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
 
 {{{cvtag(Probabilistic modelling)}}}
 {{{cvtag(Gaussian processes)}}}
 {{{cvtag(Variational inference)}}}
-{{{cvtag(Model-based reinforcement learning)}}}
 {{{cvtag(Optimal control)}}}
+{{{cvtag(Trajectory optimisation)}}}
+# {{{cvtag(Model-based reinforcement learning)}}}
+
+*** Teaching Assistant :ignore:
+{{{divider2}}}
+{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
+
+Alongside my PhD I have assisted teaching:
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
+  # This course introduced student to probabilistic machine learning: bayesian linear regression, Gaussian processes, probabilistic PCA, Bayesian optimisation.
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
+  # This course introduced student to probabilistic robotics, e.g. particle filtering.
+- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
+
+{{{cvtag(Communication)}}}
+{{{cvtag(Active listening)}}}
+{{{cvtag(Teaching)}}}
 
 *** Mott MacDonald :ignore:noexport:
 {{{divider2}}}
@@ -137,31 +152,62 @@ Researching data-efficient learning for the control of robotic systems. EPSRC Ce
 {{{cvtag(Industry)}}}
 
 ** Projects
+*** Active Learning :ignore:
+
+# {{{cvevent(Investigating Exploration-Exploitation in Multimodal Dynamical Systems (Academic), University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Exploration of Operatable Dynamics Modes in Multimodal Dynamical Systems, University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
+
+- Developing data-efficient techniques for exploration in multimodal dynamical systems.
+- The goal of this project is to explore a single dynamics mode that is known to be operatable whilst avoiding other modes.
+  # unoperatable capable of remaining in a single dynamics mode during exploration.
+
+# {{{cvtag(JAX)}}}
+{{{cvtag(Bayesian optimisation)}}}
+{{{cvtag(Gaussian processes)}}}
+{{{cvtag(Optimal control)}}}
+
+*** Traj Opt :ignore:
+{{{divider}}}
+
+{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Bristol\, UK)}}}
+
+- Synergising Bayesian inference and Riemannian geometry to control multimodal dynamical systems.
+   # Learning multimodal probabilistic transition dynamics.
+- Finds trajectories that 1) remain in a desired dynamics mode, 2) avoid regions of the dynamics with high epistemic uncertainty.
+- [[https://www.aidanscannell.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
+- [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][\faGithub aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
+
+{{{cvtag(JAX)}}}
+{{{cvtag(Probabilistic geometries)}}}
+{{{cvtag(Optimal control)}}}
+
 *** SVGP :ignore:
+{{{divider2}}}
 
 {{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Bristol\, UK)}}}
 
-- Improving scalability in the Mixtures of Gaussian Process Experts model with Gaussian process based gating networks.
+- Improving identifiability and scalability in the Mixtures of Gaussian Process Experts model with GP-based gating networks.
 - Variational inference based on sparse GP approximations.
-- \faGithub [[https://github.com/aidanscannell/mogpe][aidanscannell/mogpe]]
+-  [[https://github.com/aidanscannell/mogpe][\faGithub aidanscannell/mogpe]]
 
 {{{cvtag(GPflow)}}}
 {{{cvtag(TensorFlow)}}}
 {{{cvtag(Gaussian processes)}}}
 {{{cvtag(Variational inference)}}}
 
-*** Traj Opt :ignore:
+*** GPJax :ignore:noexport:
 {{{divider}}}
 
-{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Gaussian Processes in JAX (Code), Emacs, March 2021 - Ongoing, Bristol\, UK)}}}
 
-- Learning multimodal probabilistic transition dynamics.
-- Finds trajectories that 1) remain in a desired dynamics mode 2) avoid regions of the dynamics with high epistemic uncertainty.
-- \faGithub [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
+- Minimal Gaussian process library in JAX with a simple (custom) approach to state management.
+- \faGithub [[https://github.com/aidanscannell/GPJax][aidanscannell/GPJax]]
 
+{{{cvtag(Gaussian processes)}}}
+{{{cvtag(Variational inference)}}}
 {{{cvtag(JAX)}}}
-{{{cvtag(Probabilistic geometries)}}}
-{{{cvtag(Optimal control)}}}
+{{{cvtag(SVGP)}}}
+
 ** A day of my life :noexport:
 # #+begin_export latex
 # % \medskip
@@ -184,24 +230,17 @@ Researching data-efficient learning for the control of robotic systems. EPSRC Ce
 # % \newpage
 # #+end_export
 
-** Publications :noexport:
-#+begin_export latex
-\nocite{*}
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-% \divider
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-% \divider
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-#+end_export
-
-** Newpage :ignore:
+** Newpage :ignore:noexport:
 #+BEGIN_EXPORT latex
 \newpage
 #+END_EXPORT
 
 ** Volunteering
-*** FARSCOPE Course Rep :ignore:noexport:
-{{{cvevent(Cohort Year Rep, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
+*** FARSCOPE Course Rep :ignore:
+{{{cvevent(Cohort Representative, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
+# - I represent myself and fellow CDT students in management meetings where I communicate ideas and information between students and management.
+- Represent myself and my CDT peers in management meetings.
+- Communicate information between students and management.
 
 {{{cvtag(Communication)}}}
 {{{cvtag(Interpersonal Skills)}}}
@@ -209,14 +248,22 @@ Researching data-efficient learning for the control of robotic systems. EPSRC Ce
 {{{divider2}}}
 
 *** Code Club :ignore:
-{{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Bristol\, UK)}}}
+{{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Junction 3 Library\, Bristol \, UK)}}}
 
-I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Libraries to set up and run a Code Club for young people aged 9-13 at Junction 3 Library in Easton, Bristol.
+# - I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Libraries to set up and run a Code Club for young people aged 9-13.
+# - Demonstrating my abi involved organising,  planning lessons and teaching
+- Set up (and then ran) a [[https://codeclub.org/en/][Code Club]] for children aged 9-13.
+- Led the organisation, planning and teaching of weekly lessons.
+- Planned lessons to engage children by making coding fun.
+- Extremely rewarding and reinforced my love for teaching.
+# - @ Junction 3 Library in Easton, Bristol.
 
 {{{cvtag(Leadership)}}}
 {{{cvtag(Teaching)}}}
+{{{cvtag(Communication)}}}
+{{{cvtag(Active listening)}}}
 
-*** Drivetrain :ignore:
+*** Drivetrain :ignore:noexport:
 {{{divider2}}}
 
 {{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Bristol\, UK)}}}
@@ -230,7 +277,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Leadership)}}}
 {{{cvtag(Time Management)}}}
 
-*** Snowboard Captain :ignore:
+*** Snowboard Captain :ignore:noexport:
 {{{divider2}}}
 
 {{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Bristol\, UK)}}}
@@ -243,6 +290,26 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Teamwork)}}}
 {{{cvtag(Leadership)}}}
 {{{cvtag(Time Management)}}}
+
+** Talks
+*** Geometry Talk :ignore:
+{{{cvevent(Synergising Bayesian Inference and Probabilistic Geometries for Robotic Control, Cognitive Systems - Technical University of Denmark (DTU), 18 March 2021, Zoom)}}}
+# - Presented a method for controlling multimodal dynamical systems synergising Bayesian inference and probabilistic geometries.
+- Presented a method that synergises Bayesian inference and probabilistic geometries to control multimodal dynamical systems.
+
+{{{cvtag(Communication)}}}
+{{{cvtag(Probabilistic geometries)}}}
+{{{cvtag(Gaussian processes)}}}
+
+** Publications
+#+begin_export latex
+\nocite{*}
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+% \divider
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+% \divider
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+#+end_export
 
 * CV Column 2 :ignore:
 # Switch to the right column - will automatically move to the next page.
@@ -275,25 +342,40 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Org-mode)}}}
 
 ** Education
-{{{cvevent(Ph.D.\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
+{{{cvevent(PhD\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
+
+{{{divider}}}
+
+{{{cvevent(Gaussian Process and Uncertainty Quantification Summer School (GPSS), University of Sheffield, Sept 2019 - Sept 2019,)}}}
+
+{{{divider}}}
+
+{{{cvevent(Machine Learning Summer School Moscow (MLSS), Skoltech, Aug 2019 - Sept 2019,)}}}
 
 {{{divider}}}
 
 # {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
-{{{cvevent(M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
-- First Class Honours \\
+# {{{cvevent(a \footnote{Not official - will be awarded if Ph.D. is not completed.} M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
+#+BEGIN_EXPORT latex
+\cvevent{\footnote{Not official - awarded if Ph.D. is not completed.} MRes in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
+#+END_EXPORT
+# - First Class Honours
 - \faBook [[https://www.aidanscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
+
 
 {{{divider}}}
 
-{{{cvevent(M.Eng.\ in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
-- First Class Honours \\
+{{{cvevent(MEng in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
+# - First Class Honours \\
 - Graduated in top 10% of cohort
+
+** Newpage :ignore:
+#+BEGIN_EXPORT latex
+\newpage
+#+END_EXPORT
 
 ** My Life Philosophy :noexport:
 #+begin_export latex
-% \cvsection{My Life Philosophy}
-
 % \begin{quote}
 % ``Something smart or heartfelt, preferably in one sentence.''
 % \end{quote}
@@ -315,15 +397,19 @@ Each year, as part of Formula Student, students design, build and race a single 
 # #+end_export
 
 ** Achievements 
-{{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding.)}}}
+{{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding. Multiple gold medals in British University Snowboard Championships.)}}}
 
 {{{divider}}}
 
-{{{cvachievement(\faCertificate, Starting To Teach, Acquired the knowledge and skills to establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
+{{{cvachievement(\faCertificate, Starting To Teach, Establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
 
 {{{divider}}}
 
-{{{cvachievement(\faTrophy,Bristol Plus Award, For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23000 achieved this awards per annum.)}}}
+{{{cvachievement(\faTrophy,Bristol Plus Award, For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23\,000 achieved this award per annum.)}}}
+
+{{{divider}}}
+
+{{{cvachievement(\faCertificate, Mary Jones Prize for Mathematics, For outstanding achievements in A Level mathematics @ Ripon Grammar School)}}}
 
 ** Languages :noexport:
 #+begin_export latex
@@ -344,15 +430,10 @@ Each year, as part of Formula Student, students design, build and race a single 
 #+end_export
 
 \newpage
-** Newpage :ignore:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
-
 ** Referees
 #+begin_export latex
 % \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Arthur Richards}{University of Bristol}{Arthur.Richards@bristol.ac.uk}
+\cvref{Prof.\ Arthur Richards}{University of Bristol}{arthur.richards@bristol.ac.uk}
 % {Address Line 1\\Address line 2}
 \divider
 \cvref{Dr.\ Carl Henrik Ek}{University of Cambridge}{che29@cam.ac.uk}
@@ -364,5 +445,6 @@ Each year, as part of Formula Student, students design, build and race a single 
 \end{paracol}
 \end{document}
 #+end_export
+
 
 
