@@ -61,15 +61,16 @@
 #+EXPORT_FILE_NAME: ./resume.pdf
 #+OPTIONS: toc:nil title:nil H:1
 ** Macros
-#+MACRO: small-skip    \smallskip
-#+MACRO: med-skip      \medskip
-#+MACRO: big-skip      \bigskip
-#+MACRO: div           \divider
-#+MACRO: par-div       \par\divider
-#+MACRO: new-page      \newpage
-#+MACRO: cvevent       \cvevent{$1}{$2}{$3}{$4}
-#+MACRO: cvtag         \cvtag{$1}
-#+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+#+MACRO: small-skip        \smallskip
+#+MACRO: med-skip          \medskip
+#+MACRO: big-skip          \bigskip
+#+MACRO: div               \divider
+#+MACRO: par-div           \par\divider
+#+MACRO: new-line-med-skip \newline \medskip
+#+MACRO: new-page          \newpage
+#+MACRO: cvevent           \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvtag             \cvtag{$1}
+#+MACRO: cvachievement     \cvachievement{$1}{$2}{$3}{$4}
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
@@ -338,40 +339,47 @@ Each year, as part of Formula Student, students design, build and race a single 
 #+end_export
 
 ** Skills
-{{{cvtag(Python)}}}
-{{{cvtag(TensorFlow)}}}
-{{{cvtag(GPflow)}}}
-{{{cvtag(JAX)}}}
-{{{cvtag(NumPy)}}}
-{{{cvtag(SciPy)}}}
-{{{cvtag(Matplotlib)}}}
-{{{cvtag(GPy)}}}
-
-{{{div}}}
-
+*** Languages :ignore:
+{{{cvtag(Clojure)}}}
 {{{cvtag(Java)}}}
 {{{cvtag(C++)}}}
-{{{cvtag(MATLAB)}}}
-{{{cvtag(ROS)}}}
-
-{{{div}}}
-
-
-{{{cvtag(Git/GitHub)}}}
-{{{cvtag(LaTeX)}}}
-{{{cvtag(Org-mode)}}}
-
+*** Front-end :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(ClojureScript)}}}
+{{{cvtag(React Native)}}}
+*** Back-end :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(SQL)}}}
+{{{cvtag(REST)}}}
+*** Dev-ops :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(git)}}}
+{{{cvtag(GitHub)}}}
+{{{cvtag(AWS)}}}
+{{{cvtag(Docker)}}}
+*** Design :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(UI)}}}
+{{{cvtag(Single page applications)}}}
+{{{cvtag(Material Design)}}}
+*** Software Engineering :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(TDD)}}}
+{{{cvtag(Functional programming)}}}
+{{{cvtag(OOP)}}}
+*** Project Management :ignore:
+{{{new-line-med-skip}}}
+{{{cvtag(Project management)}}}
+{{{cvtag(Startups)}}}
+{{{cvtag(Fortune 500)}}}
 ** Education
+{{{new-line-med-skip}}}
+{{{big-skip}}}
 {{{cvevent(PhD\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
-
 {{{div}}}
-
 {{{cvevent(Gaussian Process and Uncertainty Quantification Summer School (GPSS), University of Sheffield, Sept 2019 - Sept 2019,)}}}
-
 {{{div}}}
-
 {{{cvevent(Machine Learning Summer School Moscow (MLSS), Skoltech, Aug 2019 - Sept 2019,)}}}
-
 {{{div}}}
 
 # {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
