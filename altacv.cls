@@ -217,6 +217,8 @@
 \NewInfoField{github}{\faGithub}[https://github.com/]
 \NewInfoField{orcid}{\aiOrcid}[https://orcid.com/]
 \NewInfoField{location}{\faMapMarker}
+\NewInfoField{dob}{\faBirthdayCake}
+\NewInfoField{driving}{\faCar}
 
 % v1.2: Support for multiple photos
 \newlength{\altacv@photos@width}
