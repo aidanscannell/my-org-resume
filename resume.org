@@ -61,12 +61,15 @@
 #+EXPORT_FILE_NAME: ./resume.pdf
 #+OPTIONS: toc:nil title:nil H:1
 ** Macros
-#+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: small-skip    \smallskip
+#+MACRO: med-skip      \medskip
+#+MACRO: big-skip      \bigskip
+#+MACRO: div           \divider
+#+MACRO: par-div       \par\divider
+#+MACRO: new-page      \newpage
+#+MACRO: cvevent       \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvtag         \cvtag{$1}
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
-#+MACRO: cvtag \cvtag{$1}
-#+MACRO: div \divider
-#+MACRO: par-div \par\divider
-#+MACRO: new-page \newpage
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
@@ -97,17 +100,17 @@
  ``I am a senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.''
  \end{quote}
 #+end_export
-\bigskip
+{{{big-skip}}}
 ** Experience
 *** Freelance Developer :ignore:
 {{{cvevent(Freelance Developer, Higher Order, 2014 -- Ongoing, Pune\, India)}}}
-At Higher Order Software we design, develop and deliver software of high quality at competitive rates for both established companies and early-stage startups.
+Building software of high quality at competitive rates for both established companies and early-stage startups.
 - Provide “turn key” solutions comprising full product life cycle
 - Produce reports and/or white papers on emerging technologies
 - Ideate a product or service, build PoC and develop the MVP
 - Employ best practices to reduce risk, accommodate change
 - Ensure the maximum RoI for customers' investments
-\medskip
+{{{med-skip}}}
 {{{cvtag(Clojure)}}} {{{cvtag(ClojureScript)}}} {{{cvtag(React Native)}}} {{{cvtag(SPA)}}} {{{cvtag(Material Design)}}} {{{cvtag(Functional programming)}}} {{{cvtag(SQL)}}} {{{cvtag(REST)}}} {{{cvtag(AWS)}}} {{{cvtag(Docker)}}} {{{cvtag(git)}}} {{{cvtag(UI)}}} {{{cvtag(Test driven development)}}} {{{cvtag(Startups)}}}
 *** Sr Engineer – Software :ignore:
 {{{par-div}}}
@@ -116,7 +119,7 @@ Helped design and implement highly immersive and responsive Android apps and sin
 - Built an electronic program guide SPA using REST APIs from Rovi
 - Worked on Android app for Revue Android TV remote control
 - Served as Scrum Master
-\medskip
+{{{med-skip}}}
 {{{cvtag(Android)}}} {{{cvtag(Node.js)}}} {{{cvtag(JSON)}}} {{{cvtag(jQuery)}}} {{{cvtag(Bootstrap)}}} {{{cvtag(gerrit)}}}
 # {{{cvtag(Jenkins)}}}
 *** Android Consultant :ignore:
@@ -124,28 +127,28 @@ Helped design and implement highly immersive and responsive Android apps and sin
 {{{cvevent(Android Consultant, Early-stage startups, 2009 -- 2010, Pune\, India)}}}
 - Helped early-stage startups on their mobile journey
 - Mentored developers new to Android app development
-\medskip
+{{{med-skip}}}
 {{{cvtag(Android)}}} {{{cvtag(SQLite)}}} {{{cvtag(XML)}}} {{{cvtag(Mobile)}}} {{{cvtag(Cloud)}}} {{{cvtag(Web)}}} {{{cvtag(Teamwork)}}}
 *** Software Test Manager :ignore:
 {{{div}}}
 {{{cvevent(Software Test Manager, Ecrio Inc., 2008 -- 2009, Cupertino\, USA)}}}
 - Managed the testing of SIP-based VoIP applications
 - Built and led outsourced teams co-located in US and India
-\medskip
+{{{med-skip}}}
 {{{cvtag(Symbian)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(MS Project)}}} {{{cvtag(MS Excel)}}} {{{cvtag(Bugzilla)}}}
 *** Software Engineer :ignore:
 {{{div}}}
 {{{cvevent(Software Engineer, Palm Inc., 2006 -- 2007, Sunnyvale\, USA)}}}
 - Handled Wi-Fi–Bluetooth coexistence on Treo smartphones
 - Worked closely with WLAN and BT hardware engineers
-\medskip
+{{{med-skip}}}
 {{{cvtag(PalmOS)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(Wi-Fi)}}} {{{cvtag(Bluetooth)}}} {{{cvtag(Wireshark)}}}
 *** Senior Software Engineer :ignore:
 {{{div}}}
 {{{cvevent(Senior Software Engineer, Veriwave Inc., 2005 -- 2005, Sunnyvale\, USA)}}}
 - Validated the VeriWave Command Language via extensive tests
 - Tested the generated 802.11 frames at MAC and network layers
-\medskip
+{{{med-skip}}}
 {{{cvtag(802.11)}}} {{{cvtag(WLAN)}}} {{{cvtag(Python)}}} {{{cvtag(Tcl)}}} {{{cvtag(Wireshark)}}} {{{cvtag(QA)}}}
 *** Systems Engineer :ignore:
 {{{par-div}}}
@@ -154,7 +157,7 @@ Hardware and software for wireless mesh networking access points (APs) for downt
 - Created new revenue stream through a service called Qspot
 - Designed a way to allow AP access by device's MAC address
 - Automated signing, granting and revoking security certificates
-\medskip
+{{{med-skip}}}
 {{{cvtag(Ethernet)}}} {{{cvtag(PoE)}}} {{{cvtag(bash)}}} {{{cvtag(Linux)}}} {{{cvtag(CGI)}}} {{{cvtag(OpenSSL)}}}
 *** Systems Analyst :ignore:
 {{{par-div}}}
@@ -163,7 +166,7 @@ Development of advanced 3-tier client-server Web services, for customers to subm
 - Lead a team of three engineers through development lifecycle
 - Assigned tasks, coordinated the development
 - Provided training for new team members
-\medskip
+{{{med-skip}}}
 {{{cvtag(Java)}}} {{{cvtag(VRML)}}} {{{cvtag(Simulation technology)}}} {{{cvtag(XSLT)}}} {{{cvtag(Servlets)}}} {{{cvtag(LAMP)}}} {{{cvtag(Windows 2000)}}}
 *** Software Engineer :ignore:
 {{{new-page}}}
@@ -173,7 +176,7 @@ Work involved maintenance and enhancement of CAD/CAM software developed by Compu
 - Ran integration, system, regression and unit tests
 - Performed QA based on ISO-9001 and CMM
 - Educated team-members about CMM via a series of seminars
-\medskip
+{{{med-skip}}}
 {{{cvtag(CAD/CAM)}}} {{{cvtag(Capibility Maturity Model)}}} {{{cvtag(C)}}} {{{cvtag(C++)}}} {{{cvtag(Solaris)}}} {{{cvtag(Windows NT)}}}
 {{{new-page}}}
 ** Newpage :ignore:noexport:
@@ -226,7 +229,7 @@ Worked on popular iOS and Android React Native apps
 
 ** A day of my life :noexport:
 # #+begin_export latex
-# % \medskip
+# % {{{med-skip}}}
 
 # % \cvsection{A Day of My Life}
 
@@ -440,9 +443,9 @@ Each year, as part of Formula Student, students design, build and race a single 
 % \cvskill{German}{3}
 
 % %% Yeah I didn't spend too much time making all the
-% %% spacing consistent... sorry. Use \smallskip, \medskip,
+% %% spacing consistent... sorry. Use \smallskip, {{{med-skip}}},
 % %% \bigskip, \vpsace etc to make ajustments.
-% \medskip
+% \med-skip
 #+end_export
 
 \newpage
