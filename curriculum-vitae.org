@@ -51,13 +51,17 @@
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+LATEX_HEADER: \usepackage[bottom]{footmisc}
 *** Bibliograpny
+# #+LATEX_HEADER: \DeclareNameAlias{sortname}{last-first}
+#+LATEX_HEADER: \DeclareNameAlias{sortname}{given-family}
 #+LATEX_HEADER: \addbibresource{aidan.bib}
 # #+LATEX_HEADER: \usepackage[citestyle=numeric-comp, maxcitenames=1, maxbibnames=4, doi=false, isbn=false, eprint=true, backend=bibtex, hyperref=true, url=false, natbib=true]{biblatex}
-#+LATEX_HEADER: \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+# #+LATEX_HEADER: \usepackage[backend=biber, sorting=nyvt, style=authoryear, firstinits]{biblatex}
+# #+LATEX_HEADER: \usepackage[backend=natbib, giveninits=true]{biblatex}
+#+LATEX_HEADER: \usepackage[style=trad-abbrv,sorting=none,sortcites=true,doi=false,url=false,giveninits=true,hyperref]{biblatex}
 
 ** Exporter Settings
 #+AUTHOR: Aidan Scannell
-#+EXPORT_FILE_NAME: ./resume.pdf
+#+EXPORT_FILE_NAME: ./curriculum-vitae.pdf
 #+OPTIONS: toc:nil title:nil H:1
 ** Macros
 #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
@@ -82,6 +86,8 @@
   \location{Bristol, UK}
   \github{aidanscannell}
   \linkedin{aidan-scannell-82522789/}
+  \dob{22 April 1994}
+  \driving{UK Driving Licence}
 }
 \makecvheader
 #+end_export
@@ -151,6 +157,16 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Teamwork)}}}
 {{{cvtag(Industry)}}}
 
+** Publications
+#+begin_export latex
+\nocite{*}
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+% \divider
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+% \divider
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+#+end_export
+
 ** Projects
 *** Active Learning :ignore:
 
@@ -166,20 +182,27 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Gaussian processes)}}}
 {{{cvtag(Optimal control)}}}
 
+** Newpage :ignore:
+#+BEGIN_EXPORT latex
+\newpage
+#+END_EXPORT
+
+** Projects (Cont.)
 *** Traj Opt :ignore:
-{{{divider}}}
+# {{{divider}}}
 
 {{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Bristol\, UK)}}}
 
 - Synergising Bayesian inference and Riemannian geometry to control multimodal dynamical systems.
    # Learning multimodal probabilistic transition dynamics.
 - Finds trajectories that 1) remain in a desired dynamics mode, 2) avoid regions of the dynamics with high epistemic uncertainty.
-- [[https://www.aidanscannell.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
 - [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][\faGithub aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
+# - [[https://www.aidanscannell.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
 
 {{{cvtag(JAX)}}}
 {{{cvtag(Probabilistic geometries)}}}
 {{{cvtag(Optimal control)}}}
+
 
 *** SVGP :ignore:
 {{{divider2}}}
@@ -291,25 +314,15 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Leadership)}}}
 {{{cvtag(Time Management)}}}
 
-** Talks
+** Invited Talks
 *** Geometry Talk :ignore:
 {{{cvevent(Synergising Bayesian Inference and Probabilistic Geometries for Robotic Control, Cognitive Systems - Technical University of Denmark (DTU), 18 March 2021, Zoom)}}}
 # - Presented a method for controlling multimodal dynamical systems synergising Bayesian inference and probabilistic geometries.
-- Presented a method that synergises Bayesian inference and probabilistic geometries to control multimodal dynamical systems.
+- Presented a method synergising Bayesian inference and probabilistic geometries to control multimodal dynamical systems.
 
 {{{cvtag(Communication)}}}
 {{{cvtag(Probabilistic geometries)}}}
 {{{cvtag(Gaussian processes)}}}
-
-** Publications
-#+begin_export latex
-\nocite{*}
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-% \divider
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-% \divider
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-#+end_export
 
 * CV Column 2 :ignore:
 # Switch to the right column - will automatically move to the next page.
@@ -357,7 +370,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 # {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
 # {{{cvevent(a \footnote{Not official - will be awarded if Ph.D. is not completed.} M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
 #+BEGIN_EXPORT latex
-\cvevent{\footnote{Not official - awarded if Ph.D. is not completed.} MRes in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
+\cvevent{\footnote{Awarded if PhD is not completed.} MRes in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
 #+END_EXPORT
 # - First Class Honours
 - \faBook [[https://www.aidanscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
@@ -401,7 +414,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 
 {{{divider}}}
 
-{{{cvachievement(\faCertificate, Starting To Teach, Establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
+{{{cvachievement(\faCertificate, Starting To Teach, Established myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
 
 {{{divider}}}
 
@@ -410,6 +423,10 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{divider}}}
 
 {{{cvachievement(\faCertificate, Mary Jones Prize for Mathematics, For outstanding achievements in A Level mathematics @ Ripon Grammar School)}}}
+
+{{{divider}}}
+
+{{{cvachievement(\faTrophy, The Duke of Edinburgh's Award, Bronze/Silver/Gold)}}}
 
 ** Languages :noexport:
 #+begin_export latex
@@ -430,7 +447,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 #+end_export
 
 \newpage
-** Referees
+** References
 #+begin_export latex
 % \cvref{name}{email}{mailing address}
 \cvref{Prof.\ Arthur Richards}{University of Bristol}{arthur.richards@bristol.ac.uk}
