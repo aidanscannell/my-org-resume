@@ -69,6 +69,7 @@
 #+MACRO: cvtag \cvtag{$1}
 #+MACRO: divider \divider
 #+MACRO: par-div \par\divider
+#+MACRO: new-page \newpage
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
@@ -183,9 +184,7 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Optimal control)}}}
 
 ** Newpage :ignore:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
+{{{new-page}}}
 
 ** Projects (Cont.)
 *** Traj Opt :ignore:
@@ -254,9 +253,7 @@ Alongside my PhD I have assisted teaching:
 # #+end_export
 
 ** Newpage :ignore:noexport:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
+{{{new-page}}}
 
 ** Volunteering
 *** FARSCOPE Course Rep :ignore:
