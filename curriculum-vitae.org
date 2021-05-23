@@ -68,7 +68,7 @@
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
 #+MACRO: cvtag \cvtag{$1}
 #+MACRO: divider \divider
-#+MACRO: divider2 \par\divider
+#+MACRO: par-div \par\divider
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
@@ -117,7 +117,7 @@ Researching methods for data-efficient learning and control in multimodal dynami
 # {{{cvtag(Model-based reinforcement learning)}}}
 
 *** Teaching Assistant :ignore:
-{{{divider2}}}
+{{{par-div}}}
 {{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
 
 Alongside my PhD I have assisted teaching:
@@ -132,7 +132,7 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Teaching)}}}
 
 *** Mott MacDonald :ignore:noexport:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Mechanical Engineer Intern,Mott MacDonald,June 2015 -- August 2015, London\, UK)}}}
 
@@ -205,7 +205,7 @@ Alongside my PhD I have assisted teaching:
 
 
 *** SVGP :ignore:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Bristol\, UK)}}}
 
@@ -268,7 +268,7 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Communication)}}}
 {{{cvtag(Interpersonal Skills)}}}
 
-{{{divider2}}}
+{{{par-div}}}
 
 *** Code Club :ignore:
 {{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Junction 3 Library\, Bristol \, UK)}}}
@@ -287,7 +287,7 @@ Alongside my PhD I have assisted teaching:
 {{{cvtag(Active listening)}}}
 
 *** Drivetrain :ignore:noexport:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Bristol\, UK)}}}
 
@@ -301,7 +301,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Time Management)}}}
 
 *** Snowboard Captain :ignore:noexport:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Bristol\, UK)}}}
 
