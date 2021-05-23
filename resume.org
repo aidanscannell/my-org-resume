@@ -1,62 +1,63 @@
 * Config/Preamble :noexport:
 ** LaTeX Config
 #+BEGIN_SRC emacs-lisp :exports none  :results none :eval always
-(setq org-latex-logfiles-extensions (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf")))
-(add-to-list 'org-latex-classes
-             '("altacv" "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+  (add-to-list 'org-latex-classes
+	       '("altacv"
+		 "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
-% Change the page layout if you need to
-\\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+  % Change the page layout if you need to
+  \\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
 
-% Use roboto and lato for fonts
-\\renewcommand{\\familydefault}{\\sfdefault}
+  % Use roboto and lato for fonts
+  \\renewcommand{\\familydefault}{\\sfdefault}
 
-% Change the colours if you want to
-\\definecolor{SlateGrey}{HTML}{2E2E2E}
-\\definecolor{LightGrey}{HTML}{666666}
-\\definecolor{DarkPastelRed}{HTML}{450808}
-\\definecolor{PastelRed}{HTML}{8F0D0D}
-\\definecolor{GoldenEarth}{HTML}{E7D192}
-\\colorlet{name}{black}
-\\colorlet{tagline}{PastelRed}
-\\colorlet{heading}{DarkPastelRed}
-\\colorlet{headingrule}{GoldenEarth}
-\\colorlet{subheading}{PastelRed}
-\\colorlet{accent}{PastelRed}
-\\colorlet{emphasis}{SlateGrey}
-\\colorlet{body}{LightGrey}
+  % Change the colours if you want to
+  \\definecolor{SlateGrey}{HTML}{2E2E2E}
+  \\definecolor{LightGrey}{HTML}{666666}
+  \\definecolor{DarkPastelRed}{HTML}{450808}
+  \\definecolor{PastelRed}{HTML}{8F0D0D}
+  \\definecolor{GoldenEarth}{HTML}{E7D192}
+  \\colorlet{name}{black}
+  \\colorlet{tagline}{PastelRed}
+  \\colorlet{heading}{DarkPastelRed}
+  \\colorlet{headingrule}{GoldenEarth}
+  \\colorlet{subheading}{PastelRed}
+  \\colorlet{accent}{PastelRed}
+  \\colorlet{emphasis}{SlateGrey}
+  \\colorlet{body}{LightGrey}
 
-% Change some fonts, if necessary
-\\renewcommand{\\namefont}{\\Huge\\rmfamily\\bfseries}
-\\renewcommand{\\personalinfofont}{\\footnotesize}
-\\renewcommand{\\cvsectionfont}{\\LARGE\\rmfamily\\bfseries}
-\\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}
+  % Change some fonts, if necessary
+  \\renewcommand{\\namefont}{\\Huge\\rmfamily\\bfseries}
+  \\renewcommand{\\personalinfofont}{\\footnotesize}
+  \\renewcommand{\\cvsectionfont}{\\LARGE\\rmfamily\\bfseries}
+  \\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}
 
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
-\\renewcommand{\\itemmarker}{{\\small\\textbullet}}
-\\renewcommand{\\ratingmarker}{\\faCircle}
-"
+  % Change the bullets for itemize and rating marker
+  % for \cvskill if you want to
+  \\renewcommand{\\itemmarker}{{\\small\\textbullet}}
+  \\renewcommand{\\ratingmarker}{\\faCircle}
+  "
+		 ("\\cvsection{%s}" . "\\cvsection*{%s}")
+		 ("\\cvevent{%s}" . "\\cvevent*{%s}")))
 
-               ("\\cvsection{%s}" . "\\cvsection*{%s}")
-               ("\\cvevent{%s}" . "\\cvevent*{%s}")))
-(setq org-latex-packages-alist 'nil)
-(setq org-latex-default-packages-alist
-      '(("rm" "roboto"  t)
-        ("defaultsans" "lato" t)
-        ("" "paracol" t)
-        ))
+  (setq org-latex-default-packages-alist
+	'(("rm" "roboto"  t)
+	  ("defaultsans" "lato" t)
+	  ("" "paracol" t)))
+
+  (setq org-latex-packages-alist 'nil)
 #+END_SRC
+
 #+LATEX_CLASS: altacv
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+LATEX_HEADER: \usepackage[bottom]{footmisc}
 *** Bibliograpny
-#+LATEX_HEADER: \addbibresource{aidan.bib}
+#+LATEX_HEADER: \addbibresource{pankaj.bib}
 # #+LATEX_HEADER: \usepackage[citestyle=numeric-comp, maxcitenames=1, maxbibnames=4, doi=false, isbn=false, eprint=true, backend=bibtex, hyperref=true, url=false, natbib=true]{biblatex}
 #+LATEX_HEADER: \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
 
 ** Exporter Settings
-#+AUTHOR: Aidan Scannell
+#+AUTHOR: Pankaj Godbole
 #+EXPORT_FILE_NAME: ./resume.pdf
 #+OPTIONS: toc:nil title:nil H:1
 ** Macros
@@ -68,21 +69,20 @@
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
-\name{Aidan Scannell}
-\photoR{2.8cm}{aidan_portrait.jpeg}
-\tagline{PhD Researcher}
+\name{Pankaj Godbole}
+\photoR{2.8cm}{portrait.jpeg}
+\tagline{Clojure Developer}
 #+end_export
-
 ** Personal Info :ignore:
 #+begin_export latex
+\medskip
 \personalinfo{%
-  \homepage{www.aidanscannell.com}
-  \email{scannell.aidan@gmail.com}
-  \phone{+44 787 558 3912}
-  \location{Bristol, UK}
-  \github{aidanscannell}
-  \linkedin{aidan-scannell-82522789/}
-}
+  \homepage{pankajgodbole.github.io}
+  \email{pankajsg@gmail.com}
+  \phone{+91 96373 66884}
+  \location{Pune, India}
+  \github{pankajgodbole}
+  \linkedin{pankajgodbole}}
 \makecvheader
 #+end_export
 
@@ -93,89 +93,106 @@
 ** Personal Statement :ignore:
 #+begin_export latex
  \begin{quote}
- ``I am an aspiring researcher with interests at the intersection of probabilistic machine learning and control theory. I am particularly interested in uncertainty quantification and as a result, a great deal of my work focuses on Bayesian non-parametric methods, specifically Gaussian processes and variational inference.''
+ ``I am a senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.''
  \end{quote}
 #+end_export
 ** Experience
-*** PhD Researcher :ignore:
-{{{cvevent(PhD Researcher, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
-
-# Researching methods for probabilistic inference and control in multimodal dynamical systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
-Researching methods for data-efficient learning and control in multimodal dynamical systems. EPSRC Centre for Doctoral Training in Future Autonomous and Robotic Systems (FARSCOPE).
-
-{{{cvtag(Probabilistic modelling)}}}
-{{{cvtag(Gaussian processes)}}}
-{{{cvtag(Variational inference)}}}
-{{{cvtag(Optimal control)}}}
-{{{cvtag(Trajectory optimisation)}}}
-# {{{cvtag(Model-based reinforcement learning)}}}
-
-*** Teaching Assistant :ignore:
+*** Freelance Developer :ignore:
+{{{cvevent(Freelance Developer, Higher Order, 2014 -- Ongoing, Pune\, India)}}}
+At Higher Order Software we design, develop and deliver software of high quality at competitive rates for both established companies and early-stage startups.
+- Provide “turn key” solutions comprising full product life cycle
+- Produce reports and/or white papers on emerging technologies
+- Ideate a product or service, build PoC and develop the MVP
+- Employ best practices to reduce risk, accommodate change
+- Ensure the maximum RoI for customers' investments
+\medskip
+{{{cvtag(Clojure)}}} {{{cvtag(ClojureScript)}}} {{{cvtag(React Native)}}} {{{cvtag(SPA)}}} {{{cvtag(Material Design)}}} {{{cvtag(Functional programming)}}} {{{cvtag(SQL)}}} {{{cvtag(REST)}}} {{{cvtag(AWS)}}} {{{cvtag(Docker)}}} {{{cvtag(git)}}} {{{cvtag(UI)}}} {{{cvtag(Test driven development)}}} {{{cvtag(Startups)}}}
+*** Sr Engineer – Software :ignore:
 {{{divider2}}}
-{{{cvevent(Teaching Assistant, University of Bristol,Sept 2018 -- Ongoing, Bristol\, UK)}}}
-
-Alongside my PhD I have assisted teaching:
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMS30007][Machine Learning COMS30007]]
-  # This course introduced student to probabilistic machine learning: bayesian linear regression, Gaussian processes, probabilistic PCA, Bayesian optimisation.
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19%2F20&unitCode=COMSM0012][Robotic Systems COMSM0012]]
-  # This course introduced student to probabilistic robotics, e.g. particle filtering.
-- [[https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=19/20\&unitCode=EMATM0042][Intelligent Information Systems EMATM0042]]
-
-{{{cvtag(Communication)}}}
-{{{cvtag(Active listening)}}}
-{{{cvtag(Teaching)}}}
-
-*** Mott MacDonald :ignore:noexport:
+{{{cvevent(Sr Engineer – Software, Logitech Designs India Pvt Ltd, 2010 -- 2013, Chennai\, India)}}}
+Helped design and implement highly immersive and responsive Android apps and single page applications for Harmony universal remote controls and Revue Android TV in the Digital Home Group.
+- Built an electronic program guide SPA using REST APIs from Rovi
+- Worked on Android app for Revue Android TV remote control
+- Served as Scrum Master
+\medskip
+{{{cvtag(Android)}}} {{{cvtag(Node.js)}}} {{{cvtag(JSON)}}} {{{cvtag(jQuery)}}} {{{cvtag(Bootstrap)}}} {{{cvtag(gerrit)}}}
+# {{{cvtag(Jenkins)}}}
+*** Android Consultant :ignore:
 {{{divider2}}}
-
-{{{cvevent(Mechanical Engineer Intern,Mott MacDonald,June 2015 -- August 2015, London\, UK)}}}
-
-# I worked as a mechanical engineer within the building services division where I developed my
-# teamwork skills and learned the importance of knowledge management.
-# I was in charge of optimising the heating, ventilation and air-conditioning of a building a
-# Hackney Wick underground station.
-# I met with external architects to communicate our ideas and I personally overcame logistical issues
-# and improved a systems efficiency, resulting in the designs approval.
-# I consistently met deadlines whilst working under pressure and was offered future employment.
-# This internship strengthened my desire to move away from engineering and pursue a research driven
-# career involving mathematics and programming.
-
-- Developed teamwork skills, learning the importance of knowledge management within a team.
-- Overcame logistical issues and improved a system’s efficiency, resulting in the design’s approval.
-- Consistently met deadlines whilst working under pressure.
-- Conducted a feasibility study and estimated project costs that informed subsequent action.
-- Located an error and proposed a solution. Communicating this to relevant managers resulted in its successful implementation.
-- Mott MacDonald offered me future employment following my summer placement.
-  
-{{{cvtag(Engineering)}}}
-{{{cvtag(Teamwork)}}}
-{{{cvtag(Industry)}}}
-
+{{{cvevent(Android Consultant, Early-stage startups, 2009 -- 2010, Pune\, India)}}}
+- Helped early-stage startups on their mobile journey
+- Mentored developers new to Android app development
+\medskip
+{{{cvtag(Android)}}} {{{cvtag(SQLite)}}} {{{cvtag(XML)}}} {{{cvtag(Mobile)}}} {{{cvtag(Cloud)}}} {{{cvtag(Web)}}} {{{cvtag(Teamwork)}}}
+*** Software Test Manager :ignore:
+{{{divider2}}}
+{{{cvevent(Software Test Manager, Ecrio Inc., 2008 -- 2009, Cupertino\, USA)}}}
+- Managed the testing of SIP-based VoIP applications
+- Built and led outsourced teams co-located in US and India
+\medskip
+{{{cvtag(Symbian)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(MS Project)}}} {{{cvtag(MS Excel)}}} {{{cvtag(Bugzilla)}}}
+*** Software Engineer :ignore:
+{{{divider2}}}
+{{{cvevent(Software Engineer, Palm Inc., 2006 -- 2007, Sunnyvale\, USA)}}}
+- Handled Wi-Fi–Bluetooth coexistence on Treo smartphones
+- Worked closely with WLAN and BT hardware engineers
+\medskip
+{{{cvtag(PalmOS)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(Wi-Fi)}}} {{{cvtag(Bluetooth)}}} {{{cvtag(Wireshark)}}}
+*** Senior Software Engineer :ignore:
+{{{divider2}}}
+{{{cvevent(Senior Software Engineer, Veriwave Inc., 2005 -- 2005, Sunnyvale\, USA)}}}
+- Validated the VeriWave Command Language APIs via extensive tests
+- Tested the generated 802.11 frames at MAC and network layers
+\medskip
+{{{cvtag(802.11)}}} {{{cvtag(WLAN)}}} {{{cvtag(Python)}}} {{{cvtag(Tcl)}}} {{{cvtag(Wireshark)}}} {{{cvtag(QA)}}}
+*** Systems Engineer :ignore:
+{{{divider2}}}
+{{{cvevent(Systems Engineer, Qorvus Systems, 2004 -- 2005, Vancouver\, USA)}}}
+Hardware and software for wireless mesh networking access points (APs) for downtowns, 24/7 wireless video monitoring, remote sensing in industrial applications, etc.
+- Created new revenue stream through a service called Qspot
+- Developed means to allow or deny access based on MAC address
+- Automated signing, updating and revocing security certificates
+\medskip
+{{{cvtag(Ethernet)}}} {{{cvtag(PoE)}}} {{{cvtag(bash)}}} {{{cvtag(Linux)}}} {{{cvtag(CGI)}}} {{{cvtag(OpenSSL)}}}
+*** Systems Analyst :ignore:
+{{{divider2}}}
+{{{cvevent(Systems Analyst, American Bureau of Shipping, 2000 -- 2001, Houston\, USA)}}}
+Development of advanced 3-tier client-server Web services, for customers to submit engineering data for detailed modeling and analysis by ABS' engineers.
+- Lead a team of three engineers through development lifecycle
+- Assigned tasks, coordinated the development
+- Provided training for new team members
+\medskip
+{{{cvtag(Java)}}} {{{cvtag(VRML)}}} {{{cvtag(Simulation technology)}}} {{{cvtag(XSLT)}}} {{{cvtag(Servlets)}}} {{{cvtag(LAMP)}}} {{{cvtag(Windows 2000)}}}
+*** Software Engineer :ignore:
+{{{divider2}}}
+{{{cvevent(Software Engineer, Patni Computer Systems, 1997 -- 2000, Pune\, India)}}}
+Work involved maintenance and enhancement of CAD/CAM software developed by Computer Vision Corporation and Parametric Technologies Corporation
+- Ported C and C++ modules from Solaris to Windows NT
+- Ran unit-level, regression, integration, white-box and black-box tests
+- Performed QA based on ISO-9001 and CMM
+- Educated team-members about CMM via a series of seminars
+\medskip
+{{{cvtag(CAD/CAM)}}} {{{cvtag(Capibility Maturity Model)}}} {{{cvtag(C)}}} {{{cvtag(C++)}}} {{{cvtag(Solaris)}}} {{{cvtag(Windows NT)}}}
+\newpage
+** Newpage :ignore:noexport:
+#+BEGIN_EXPORT latex
+\newpage
+#+END_EXPORT
 ** Projects
-*** Active Learning :ignore:
-
-# {{{cvevent(Investigating Exploration-Exploitation in Multimodal Dynamical Systems (Academic), University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
-{{{cvevent(Exploration of Operatable Dynamics Modes in Multimodal Dynamical Systems, University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
-
-- Developing data-efficient techniques for exploration in multimodal dynamical systems.
-- The goal of this project is to explore a single dynamics mode that is known to be operatable whilst avoiding other modes.
-  # unoperatable capable of remaining in a single dynamics mode during exploration.
-
-# {{{cvtag(JAX)}}}
-{{{cvtag(Bayesian optimisation)}}}
-{{{cvtag(Gaussian processes)}}}
-{{{cvtag(Optimal control)}}}
-
-*** Traj Opt :ignore:
+*** React Native iOS and Android apps :ignore:
+{{{cvevent(Developing native iOS and Android version of app, Urban Dictionary, Mar 2021 - Apr 2021, Remote)}}}
+Worked on popular iOS and Android React Native apps
+{{{cvtag(Clojurescript)}}} {{{cvtag(React Native)}}} {{{cvtag(re-frame)}}} {{{cvtag(shadow-cljs)}}} {{{cvtag(Expo.io)}}} {{{cvtag(Docker)}}}
+*** UPI Code Migration :ignore:
 {{{divider}}}
 
-{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Bristol\, UK)}}}
+{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Pune\, India)}}}
 
 - Synergising Bayesian inference and Riemannian geometry to control multimodal dynamical systems.
    # Learning multimodal probabilistic transition dynamics.
 - Finds trajectories that 1) remain in a desired dynamics mode, 2) avoid regions of the dynamics with high epistemic uncertainty.
-- [[https://www.aidanscannell.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
-- [[https://github.com/aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems][\faGithub aidanscannell/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
+- [[https://www.pankajgodbole.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
+- [[https://github.com/pankajgodbole/trajectory-optimisation-in-learned-multimodal-dynamical-systems][\faGithub pankajgodbole/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
 
 {{{cvtag(JAX)}}}
 {{{cvtag(Probabilistic geometries)}}}
@@ -184,11 +201,11 @@ Alongside my PhD I have assisted teaching:
 *** SVGP :ignore:
 {{{divider2}}}
 
-{{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Pune\, India)}}}
 
 - Improving identifiability and scalability in the Mixtures of Gaussian Process Experts model with GP-based gating networks.
 - Variational inference based on sparse GP approximations.
--  [[https://github.com/aidanscannell/mogpe][\faGithub aidanscannell/mogpe]]
+-  [[https://github.com/pankajgodbole/mogpe][\faGithub pankajgodbole/mogpe]]
 
 {{{cvtag(GPflow)}}}
 {{{cvtag(TensorFlow)}}}
@@ -198,10 +215,10 @@ Alongside my PhD I have assisted teaching:
 *** GPJax :ignore:noexport:
 {{{divider}}}
 
-{{{cvevent(Gaussian Processes in JAX (Code), Emacs, March 2021 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Gaussian Processes in JAX (Code), Emacs, March 2021 - Ongoing, Pune\, India)}}}
 
 - Minimal Gaussian process library in JAX with a simple (custom) approach to state management.
-- \faGithub [[https://github.com/aidanscannell/GPJax][aidanscannell/GPJax]]
+- \faGithub [[https://github.com/pankajgodbole/GPJax][pankajgodbole/GPJax]]
 
 {{{cvtag(Gaussian processes)}}}
 {{{cvtag(Variational inference)}}}
@@ -237,7 +254,7 @@ Alongside my PhD I have assisted teaching:
 
 ** Volunteering
 *** FARSCOPE Course Rep :ignore:
-{{{cvevent(Cohort Representative, FARSCOPE CDT, Sept 2018 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Cohort Representative, FARSCOPE CDT, Sept 2018 - Ongoing, Pune\, India)}}}
 # - I represent myself and fellow CDT students in management meetings where I communicate ideas and information between students and management.
 - Represent myself and my CDT peers in management meetings.
 - Communicate information between students and management.
@@ -266,7 +283,7 @@ Alongside my PhD I have assisted teaching:
 *** Drivetrain :ignore:noexport:
 {{{divider2}}}
 
-{{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Bristol\, UK)}}}
+{{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Pune\, India)}}}
 
 Each year, as part of Formula Student, students design, build and race a single seat race car.
 - Finished 2nd in the National Class 2 competition in 2013/2014, I was then selected as the Drivetrain lead.
@@ -280,7 +297,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 *** Snowboard Captain :ignore:noexport:
 {{{divider2}}}
 
-{{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Bristol\, UK)}}}
+{{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Pune\, India)}}}
 
 - Organised multiple weekly training sessions, demonstrating my ability to plan and run events smoothly.
 - Negotiated competitive prices for a growing member base within an inherently expensive sport.
@@ -360,7 +377,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 \cvevent{\footnote{Not official - awarded if Ph.D. is not completed.} MRes in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
 #+END_EXPORT
 # - First Class Honours
-- \faBook [[https://www.aidanscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
+- \faBook [[https://www.pankajscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
 
 
 {{{divider}}}
@@ -396,7 +413,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 # \cvachievement{\faHeartbeat}{British University Snowboard Slalom Champion}{Won all national British university slalom competitions in 2017-2018.}
 # #+end_export
 
-** Achievements 
+** Achievements
 {{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding. Multiple gold medals in British University Snowboard Championships.)}}}
 
 {{{divider}}}
@@ -445,6 +462,3 @@ Each year, as part of Formula Student, students design, build and race a single 
 \end{paracol}
 \end{document}
 #+end_export
-
-
-
