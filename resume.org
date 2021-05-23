@@ -74,7 +74,7 @@
 ** Photo & Tagline :ignore:
 #+begin_export latex
 \name{Pankaj Godbole}
-\photoR{2.8cm}{portrait.jpeg}
+\photoR{2.5cm}{portrait.jpeg}
 \tagline{Clojure Developer}
 #+end_export
 ** Personal Info :ignore:
@@ -94,10 +94,11 @@
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
-** Personal Statement :ignore:
+** Summary
+{{{big-skip}}}
 #+begin_export latex
  \begin{quote}
- ``I am a senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.''
+ Senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.
  \end{quote}
 #+end_export
 {{{big-skip}}}
@@ -229,7 +230,7 @@ Worked on popular iOS and Android React Native apps
 
 ** A day of my life :noexport:
 # #+begin_export latex
-# % {{{med-skip}}}
+# % \medskip
 
 # % \cvsection{A Day of My Life}
 
@@ -443,7 +444,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 % \cvskill{German}{3}
 
 % %% Yeah I didn't spend too much time making all the
-% %% spacing consistent... sorry. Use \smallskip, {{{med-skip}}},
+% %% spacing consistent... sorry. Use \smallskip, \medskip,
 % %% \bigskip, \vpsace etc to make ajustments.
 % \med-skip
 #+end_export
