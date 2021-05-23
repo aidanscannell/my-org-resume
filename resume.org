@@ -64,8 +64,9 @@
 #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
 #+MACRO: cvtag \cvtag{$1}
-#+MACRO: divider \divider
-#+MACRO: divider2 \par\divider
+#+MACRO: div \divider
+#+MACRO: par-div \par\divider
+#+MACRO: new-page \newpage
 * CV Header :ignore:
 ** Photo & Tagline :ignore:
 #+begin_export latex
@@ -76,7 +77,7 @@
 ** Personal Info :ignore:
 #+begin_export latex
 \medskip
-\personalinfo{%
+\personalinfo{
   \homepage{pankajgodbole.github.io}
   \email{pankajsg@gmail.com}
   \phone{+91 96373 66884}
@@ -96,6 +97,7 @@
  ``I am a senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.''
  \end{quote}
 #+end_export
+\bigskip
 ** Experience
 *** Freelance Developer :ignore:
 {{{cvevent(Freelance Developer, Higher Order, 2014 -- Ongoing, Pune\, India)}}}
@@ -108,7 +110,7 @@ At Higher Order Software we design, develop and deliver software of high quality
 \medskip
 {{{cvtag(Clojure)}}} {{{cvtag(ClojureScript)}}} {{{cvtag(React Native)}}} {{{cvtag(SPA)}}} {{{cvtag(Material Design)}}} {{{cvtag(Functional programming)}}} {{{cvtag(SQL)}}} {{{cvtag(REST)}}} {{{cvtag(AWS)}}} {{{cvtag(Docker)}}} {{{cvtag(git)}}} {{{cvtag(UI)}}} {{{cvtag(Test driven development)}}} {{{cvtag(Startups)}}}
 *** Sr Engineer – Software :ignore:
-{{{divider2}}}
+{{{par-div}}}
 {{{cvevent(Sr Engineer – Software, Logitech Designs India Pvt Ltd, 2010 -- 2013, Chennai\, India)}}}
 Helped design and implement highly immersive and responsive Android apps and single page applications for Harmony universal remote controls and Revue Android TV in the Digital Home Group.
 - Built an electronic program guide SPA using REST APIs from Rovi
@@ -118,44 +120,44 @@ Helped design and implement highly immersive and responsive Android apps and sin
 {{{cvtag(Android)}}} {{{cvtag(Node.js)}}} {{{cvtag(JSON)}}} {{{cvtag(jQuery)}}} {{{cvtag(Bootstrap)}}} {{{cvtag(gerrit)}}}
 # {{{cvtag(Jenkins)}}}
 *** Android Consultant :ignore:
-{{{divider2}}}
+{{{div}}}
 {{{cvevent(Android Consultant, Early-stage startups, 2009 -- 2010, Pune\, India)}}}
 - Helped early-stage startups on their mobile journey
 - Mentored developers new to Android app development
 \medskip
 {{{cvtag(Android)}}} {{{cvtag(SQLite)}}} {{{cvtag(XML)}}} {{{cvtag(Mobile)}}} {{{cvtag(Cloud)}}} {{{cvtag(Web)}}} {{{cvtag(Teamwork)}}}
 *** Software Test Manager :ignore:
-{{{divider2}}}
+{{{div}}}
 {{{cvevent(Software Test Manager, Ecrio Inc., 2008 -- 2009, Cupertino\, USA)}}}
 - Managed the testing of SIP-based VoIP applications
 - Built and led outsourced teams co-located in US and India
 \medskip
 {{{cvtag(Symbian)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(MS Project)}}} {{{cvtag(MS Excel)}}} {{{cvtag(Bugzilla)}}}
 *** Software Engineer :ignore:
-{{{divider2}}}
+{{{div}}}
 {{{cvevent(Software Engineer, Palm Inc., 2006 -- 2007, Sunnyvale\, USA)}}}
 - Handled Wi-Fi–Bluetooth coexistence on Treo smartphones
 - Worked closely with WLAN and BT hardware engineers
 \medskip
 {{{cvtag(PalmOS)}}} {{{cvtag(Windows Mobile)}}} {{{cvtag(Wi-Fi)}}} {{{cvtag(Bluetooth)}}} {{{cvtag(Wireshark)}}}
 *** Senior Software Engineer :ignore:
-{{{divider2}}}
+{{{div}}}
 {{{cvevent(Senior Software Engineer, Veriwave Inc., 2005 -- 2005, Sunnyvale\, USA)}}}
-- Validated the VeriWave Command Language APIs via extensive tests
+- Validated the VeriWave Command Language via extensive tests
 - Tested the generated 802.11 frames at MAC and network layers
 \medskip
 {{{cvtag(802.11)}}} {{{cvtag(WLAN)}}} {{{cvtag(Python)}}} {{{cvtag(Tcl)}}} {{{cvtag(Wireshark)}}} {{{cvtag(QA)}}}
 *** Systems Engineer :ignore:
-{{{divider2}}}
+{{{par-div}}}
 {{{cvevent(Systems Engineer, Qorvus Systems, 2004 -- 2005, Vancouver\, USA)}}}
 Hardware and software for wireless mesh networking access points (APs) for downtowns, 24/7 wireless video monitoring, remote sensing in industrial applications, etc.
 - Created new revenue stream through a service called Qspot
-- Developed means to allow or deny access based on MAC address
-- Automated signing, updating and revocing security certificates
+- Designed a way to allow AP access by device's MAC address
+- Automated signing, granting and revoking security certificates
 \medskip
 {{{cvtag(Ethernet)}}} {{{cvtag(PoE)}}} {{{cvtag(bash)}}} {{{cvtag(Linux)}}} {{{cvtag(CGI)}}} {{{cvtag(OpenSSL)}}}
 *** Systems Analyst :ignore:
-{{{divider2}}}
+{{{par-div}}}
 {{{cvevent(Systems Analyst, American Bureau of Shipping, 2000 -- 2001, Houston\, USA)}}}
 Development of advanced 3-tier client-server Web services, for customers to submit engineering data for detailed modeling and analysis by ABS' engineers.
 - Lead a team of three engineers through development lifecycle
@@ -164,27 +166,24 @@ Development of advanced 3-tier client-server Web services, for customers to subm
 \medskip
 {{{cvtag(Java)}}} {{{cvtag(VRML)}}} {{{cvtag(Simulation technology)}}} {{{cvtag(XSLT)}}} {{{cvtag(Servlets)}}} {{{cvtag(LAMP)}}} {{{cvtag(Windows 2000)}}}
 *** Software Engineer :ignore:
-{{{divider2}}}
+{{{new-page}}}
 {{{cvevent(Software Engineer, Patni Computer Systems, 1997 -- 2000, Pune\, India)}}}
 Work involved maintenance and enhancement of CAD/CAM software developed by Computer Vision Corporation and Parametric Technologies Corporation
 - Ported C and C++ modules from Solaris to Windows NT
-- Ran unit-level, regression, integration, white-box and black-box tests
+- Ran integration, system, regression and unit tests
 - Performed QA based on ISO-9001 and CMM
 - Educated team-members about CMM via a series of seminars
 \medskip
 {{{cvtag(CAD/CAM)}}} {{{cvtag(Capibility Maturity Model)}}} {{{cvtag(C)}}} {{{cvtag(C++)}}} {{{cvtag(Solaris)}}} {{{cvtag(Windows NT)}}}
-\newpage
+{{{new-page}}}
 ** Newpage :ignore:noexport:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
 ** Projects
 *** React Native iOS and Android apps :ignore:
 {{{cvevent(Developing native iOS and Android version of app, Urban Dictionary, Mar 2021 - Apr 2021, Remote)}}}
 Worked on popular iOS and Android React Native apps
 {{{cvtag(Clojurescript)}}} {{{cvtag(React Native)}}} {{{cvtag(re-frame)}}} {{{cvtag(shadow-cljs)}}} {{{cvtag(Expo.io)}}} {{{cvtag(Docker)}}}
 *** UPI Code Migration :ignore:
-{{{divider}}}
+{{{div}}}
 
 {{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Pune\, India)}}}
 
@@ -199,7 +198,7 @@ Worked on popular iOS and Android React Native apps
 {{{cvtag(Optimal control)}}}
 
 *** SVGP :ignore:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Pune\, India)}}}
 
@@ -213,7 +212,7 @@ Worked on popular iOS and Android React Native apps
 {{{cvtag(Variational inference)}}}
 
 *** GPJax :ignore:noexport:
-{{{divider}}}
+{{{div}}}
 
 {{{cvevent(Gaussian Processes in JAX (Code), Emacs, March 2021 - Ongoing, Pune\, India)}}}
 
@@ -262,7 +261,7 @@ Worked on popular iOS and Android React Native apps
 {{{cvtag(Communication)}}}
 {{{cvtag(Interpersonal Skills)}}}
 
-{{{divider2}}}
+{{{par-div}}}
 
 *** Code Club :ignore:
 {{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Junction 3 Library\, Bristol \, UK)}}}
@@ -281,7 +280,7 @@ Worked on popular iOS and Android React Native apps
 {{{cvtag(Active listening)}}}
 
 *** Drivetrain :ignore:noexport:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Pune\, India)}}}
 
@@ -295,7 +294,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Time Management)}}}
 
 *** Snowboard Captain :ignore:noexport:
-{{{divider2}}}
+{{{par-div}}}
 
 {{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Pune\, India)}}}
 
@@ -344,14 +343,14 @@ Each year, as part of Formula Student, students design, build and race a single 
 {{{cvtag(Matplotlib)}}}
 {{{cvtag(GPy)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvtag(Java)}}}
 {{{cvtag(C++)}}}
 {{{cvtag(MATLAB)}}}
 {{{cvtag(ROS)}}}
 
-{{{divider}}}
+{{{div}}}
 
 
 {{{cvtag(Git/GitHub)}}}
@@ -361,15 +360,15 @@ Each year, as part of Formula Student, students design, build and race a single 
 ** Education
 {{{cvevent(PhD\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvevent(Gaussian Process and Uncertainty Quantification Summer School (GPSS), University of Sheffield, Sept 2019 - Sept 2019,)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvevent(Machine Learning Summer School Moscow (MLSS), Skoltech, Aug 2019 - Sept 2019,)}}}
 
-{{{divider}}}
+{{{div}}}
 
 # {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
 # {{{cvevent(a \footnote{Not official - will be awarded if Ph.D. is not completed.} M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
@@ -380,7 +379,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 - \faBook [[https://www.pankajscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
 
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvevent(MEng in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
 # - First Class Honours \\
@@ -416,15 +415,15 @@ Each year, as part of Formula Student, students design, build and race a single 
 ** Achievements
 {{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding. Multiple gold medals in British University Snowboard Championships.)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvachievement(\faCertificate, Starting To Teach, Establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvachievement(\faTrophy,Bristol Plus Award, For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23\,000 achieved this award per annum.)}}}
 
-{{{divider}}}
+{{{div}}}
 
 {{{cvachievement(\faCertificate, Mary Jones Prize for Mathematics, For outstanding achievements in A Level mathematics @ Ripon Grammar School)}}}
 
