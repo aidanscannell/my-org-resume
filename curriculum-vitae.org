@@ -50,7 +50,7 @@
 #+LATEX_CLASS: altacv
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+LATEX_HEADER: \usepackage[bottom]{footmisc}
-*** Bibliograpny
+*** Bibliography
 # #+LATEX_HEADER: \DeclareNameAlias{sortname}{last-first}
 #+LATEX_HEADER: \DeclareNameAlias{sortname}{given-family}
 #+LATEX_HEADER: \addbibresource{aidan.bib}
@@ -79,7 +79,7 @@
 
 ** Personal Info :ignore:
 #+begin_export latex
-\personalinfo{%
+\personalinfo{
   \homepage{www.aidanscannell.com}
   \email{scannell.aidan@gmail.com}
   \phone{+44 787 558 3912}
