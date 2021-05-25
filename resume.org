@@ -1,53 +1,5 @@
 * Config/Preamble :noexport:
 ** LaTeX Config
-#+BEGIN_SRC emacs-lisp :exports none  :results none :eval always
-  (add-to-list 'org-latex-classes
-	       '("altacv"
-		 "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
-
-  % Change the page layout if you need to
-  \\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
-
-  % Use roboto and lato for fonts
-  \\renewcommand{\\familydefault}{\\sfdefault}
-
-  % Change the colours if you want to
-  \\definecolor{SlateGrey}{HTML}{2E2E2E}
-  \\definecolor{LightGrey}{HTML}{666666}
-  \\definecolor{DarkPastelRed}{HTML}{450808}
-  \\definecolor{PastelRed}{HTML}{8F0D0D}
-  \\definecolor{GoldenEarth}{HTML}{E7D192}
-  \\colorlet{name}{black}
-  \\colorlet{tagline}{PastelRed}
-  \\colorlet{heading}{DarkPastelRed}
-  \\colorlet{headingrule}{GoldenEarth}
-  \\colorlet{subheading}{PastelRed}
-  \\colorlet{accent}{PastelRed}
-  \\colorlet{emphasis}{SlateGrey}
-  \\colorlet{body}{LightGrey}
-
-  % Change some fonts, if necessary
-  \\renewcommand{\\namefont}{\\Huge\\rmfamily\\bfseries}
-  \\renewcommand{\\personalinfofont}{\\footnotesize}
-  \\renewcommand{\\cvsectionfont}{\\LARGE\\rmfamily\\bfseries}
-  \\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}
-
-  % Change the bullets for itemize and rating marker
-  % for \cvskill if you want to
-  \\renewcommand{\\itemmarker}{{\\small\\textbullet}}
-  \\renewcommand{\\ratingmarker}{\\faCircle}
-  "
-		 ("\\cvsection{%s}" . "\\cvsection*{%s}")
-		 ("\\cvevent{%s}" . "\\cvevent*{%s}")))
-
-  (setq org-latex-default-packages-alist
-	'(("rm" "roboto"  t)
-	  ("defaultsans" "lato" t)
-	  ("" "paracol" t)))
-
-  (setq org-latex-packages-alist 'nil)
-#+END_SRC
-
 #+LATEX_CLASS: altacv
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+LATEX_HEADER: \usepackage[bottom]{footmisc}
@@ -55,7 +7,6 @@
 #+LATEX_HEADER: \addbibresource{pankaj.bib}
 # #+LATEX_HEADER: \usepackage[citestyle=numeric-comp, maxcitenames=1, maxbibnames=4, doi=false, isbn=false, eprint=true, backend=bibtex, hyperref=true, url=false, natbib=true]{biblatex}
 #+LATEX_HEADER: \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
-
 ** Exporter Settings
 #+AUTHOR: Pankaj Godbole
 #+EXPORT_FILE_NAME: ./resume.pdf
@@ -66,7 +17,9 @@
 #+MACRO: big-skip          \bigskip
 #+MACRO: div               \divider
 #+MACRO: par-div           \par\divider
+#+MACRO: new-line          \newline
 #+MACRO: new-line-med-skip \newline \medskip
+#+MACRO: new-line-big-skip \newline \bigskip
 #+MACRO: new-page          \newpage
 #+MACRO: cvevent           \cvevent{$1}{$2}{$3}{$4}
 #+MACRO: cvtag             \cvtag{$1}
@@ -90,47 +43,47 @@
   \linkedin{pankajgodbole}}
 \makecvheader
 #+end_export
-
 * CV Column 1 :ignore:
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
 ** Summary
-{{{big-skip}}}
+{{{small-skip}}}
 #+begin_export latex
  \begin{quote}
- Senior engineer with many years of experience in developing applications and services on Linux, macOS, Windows, Android, JVM, and web-browser for Mobile, Cloud, Desktop and Embedded platforms. Skilled in requirements analysis, architecture high-level design, implementation, testing, deployment and maintenance. Domain experience includes AI, blockchain, fintech, mobile and e-commerce. Available now.
+Skilled engineer with many years of experience in developing mobile, cloud, desktop and embedded software for Android, iOS, JVM, and Web-browser, Linux, macOS and Windows platforms. Skilled in requirements analysis, software architecture, high-level design, coding, testing, deployment and maintenance. Domain experience includes AI, blockchain, and fintech. Available now.
  \end{quote}
 #+end_export
 {{{big-skip}}}
 ** Experience
-*** Freelance Developer :ignore:
-{{{cvevent(Freelance Developer, Higher Order, 2014 -- Ongoing, Pune\, India)}}}
+*** Clojure Developer :ignore:
+{{{cvevent(Clojure Developer, Higher Order, 2014 -- Ongoing, Pune\, India)}}}
 Building software of high quality at competitive rates for both established companies and early-stage startups.
-- Provide “turn key” solutions comprising full product life cycle
-- Produce reports and/or white papers on emerging technologies
-- Ideate a product or service, build PoC and develop the MVP
-- Employ best practices to reduce risk, accommodate change
-- Ensure the maximum RoI for customers' investments
+{{{small-skip}}}
+- Build cloud, mobile and desktop apps using Web and native tools
+- Write back-end server-side APIs and services
+- Design and implement responsive front-end user interfaces
+- Involved in the full product life-cycle
+- Building software PoCs and MVPs to ensure feasibility of an idea
 {{{med-skip}}}
-{{{cvtag(Clojure)}}} {{{cvtag(ClojureScript)}}} {{{cvtag(React Native)}}} {{{cvtag(SPA)}}} {{{cvtag(Material Design)}}} {{{cvtag(Functional programming)}}} {{{cvtag(SQL)}}} {{{cvtag(REST)}}} {{{cvtag(AWS)}}} {{{cvtag(Docker)}}} {{{cvtag(git)}}} {{{cvtag(UI)}}} {{{cvtag(Test driven development)}}} {{{cvtag(Startups)}}}
-*** Sr Engineer – Software :ignore:
+{{{cvtag(Clojure)}}} {{{cvtag(ClojureScript)}}} {{{cvtag(React Native)}}} {{{cvtag(SPA)}}} {{{cvtag(FP)}}} {{{cvtag(SQL)}}} {{{cvtag(REST)}}} {{{cvtag(AWS)}}} {{{cvtag(Docker)}}} {{{cvtag(git)}}} {{{cvtag(UI)}}} {{{cvtag(TDD)}}} {{{cvtag(Startups)}}}
+*** Senior Engineer – Software :ignore:
 {{{par-div}}}
-{{{cvevent(Sr Engineer – Software, Logitech Designs India Pvt Ltd, 2010 -- 2013, Chennai\, India)}}}
-Helped design and implement highly immersive and responsive Android apps and single page applications for Harmony universal remote controls and Revue Android TV in the Digital Home Group.
+{{{cvevent(Senior Engineer – Software, Logitech Designs India Pvt Ltd, 2010 -- 2013, Chennai\, India)}}}
+Built immersive and responsive Android apps and single page applications for universal remote controls and Android TV products
+{{{small-skip}}}
 - Built an electronic program guide SPA using REST APIs from Rovi
-- Worked on Android app for Revue Android TV remote control
 - Served as Scrum Master
 {{{med-skip}}}
-{{{cvtag(Android)}}} {{{cvtag(Node.js)}}} {{{cvtag(JSON)}}} {{{cvtag(jQuery)}}} {{{cvtag(Bootstrap)}}} {{{cvtag(gerrit)}}}
-# {{{cvtag(Jenkins)}}}
+{{{cvtag(Android)}}} {{{cvtag(Node.js)}}} {{{cvtag(SPA)}}} {{{cvtag(jQuery)}}} {{{cvtag(Bootstrap)}}} {{{cvtag(Jenkins)}}}
 *** Android Consultant :ignore:
-{{{div}}}
+{{{new-page}}}
 {{{cvevent(Android Consultant, Early-stage startups, 2009 -- 2010, Pune\, India)}}}
 - Helped early-stage startups on their mobile journey
-- Mentored developers new to Android app development
+- Mentored novice Android developers
 {{{med-skip}}}
-{{{cvtag(Android)}}} {{{cvtag(SQLite)}}} {{{cvtag(XML)}}} {{{cvtag(Mobile)}}} {{{cvtag(Cloud)}}} {{{cvtag(Web)}}} {{{cvtag(Teamwork)}}}
+{{{cvtag(Android)}}} {{{cvtag(SQLite)}}} {{{cvtag(XML)}}} {{{cvtag(Mobile)}}} {{{cvtag(Cloud)}}} {{{cvtag(Web)}}}
+# {{{cvtag(Teamwork)}}}
 *** Software Test Manager :ignore:
 {{{div}}}
 {{{cvevent(Software Test Manager, Ecrio Inc., 2008 -- 2009, Cupertino\, USA)}}}
@@ -156,6 +109,7 @@ Helped design and implement highly immersive and responsive Android apps and sin
 {{{par-div}}}
 {{{cvevent(Systems Engineer, Qorvus Systems, 2004 -- 2005, Vancouver\, USA)}}}
 Hardware and software for wireless mesh networking access points (APs) for downtowns, 24/7 wireless video monitoring, remote sensing in industrial applications, etc.
+{{{small-skip}}}
 - Created new revenue stream through a service called Qspot
 - Designed a way to allow AP access by device's MAC address
 - Automated signing, granting and revoking security certificates
@@ -164,77 +118,88 @@ Hardware and software for wireless mesh networking access points (APs) for downt
 *** Systems Analyst :ignore:
 {{{par-div}}}
 {{{cvevent(Systems Analyst, American Bureau of Shipping, 2000 -- 2001, Houston\, USA)}}}
-Development of advanced 3-tier client-server Web services, for customers to submit engineering data for detailed modeling and analysis by ABS' engineers.
+Developed of advanced 3-tier client-server Web services, enabling engineers to model and analyze complex marine structures.
+{{{small-skip}}}
 - Lead a team of three engineers through development lifecycle
 - Assigned tasks, coordinated the development
-- Provided training for new team members
+- Mentored new team members
 {{{med-skip}}}
 {{{cvtag(Java)}}} {{{cvtag(VRML)}}} {{{cvtag(Simulation technology)}}} {{{cvtag(XSLT)}}} {{{cvtag(Servlets)}}} {{{cvtag(LAMP)}}} {{{cvtag(Windows 2000)}}}
 *** Software Engineer :ignore:
-{{{new-page}}}
+{{{par-div}}}
 {{{cvevent(Software Engineer, Patni Computer Systems, 1997 -- 2000, Pune\, India)}}}
-Work involved maintenance and enhancement of CAD/CAM software developed by Computer Vision Corporation and Parametric Technologies Corporation
+Maintained and enhanced advanced CAD/CAM software from Computer Vision and Parametric Technologies Corp.
+{{{small-skip}}}
 - Ported C and C++ modules from Solaris to Windows NT
-- Ran integration, system, regression and unit tests
 - Performed QA based on ISO-9001 and CMM
 - Educated team-members about CMM via a series of seminars
 {{{med-skip}}}
-{{{cvtag(CAD/CAM)}}} {{{cvtag(Capibility Maturity Model)}}} {{{cvtag(C)}}} {{{cvtag(C++)}}} {{{cvtag(Solaris)}}} {{{cvtag(Windows NT)}}}
-{{{new-page}}}
-** Newpage :ignore:noexport:
+{{{cvtag(C)}}} {{{cvtag(Fortran)}}} {{{cvtag(Solaris)}}} {{{cvtag(Windows NT)}}} {{{cvtag(CAD/CAM)}}}
+# {{{cvtag(Capibility Maturity Model)}}}
+{{{new-line-big-skip}}}
 ** Projects
-*** React Native iOS and Android apps :ignore:
-{{{cvevent(Developing native iOS and Android version of app, Urban Dictionary, Mar 2021 - Apr 2021, Remote)}}}
-Worked on popular iOS and Android React Native apps
+*** Developing iOS and Android apps :ignore:
+{{{cvevent(Developing iOS and Android apps, Urban Dictionary, Mar 2021 - Apr 2021)}}}
+Worked on native mobile apps using React Native apps
 {{{cvtag(Clojurescript)}}} {{{cvtag(React Native)}}} {{{cvtag(re-frame)}}} {{{cvtag(shadow-cljs)}}} {{{cvtag(Expo.io)}}} {{{cvtag(Docker)}}}
-*** UPI Code Migration :ignore:
+*** UPI Code Migration :ignore:noexport:
 {{{div}}}
-
-{{{cvevent(Trajectory Optimisation in Learned Multimodal Dynamical Systems, University of Bristol, Sept 2019 - March 2021, Pune\, India)}}}
-
-- Synergising Bayesian inference and Riemannian geometry to control multimodal dynamical systems.
-   # Learning multimodal probabilistic transition dynamics.
-- Finds trajectories that 1) remain in a desired dynamics mode, 2) avoid regions of the dynamics with high epistemic uncertainty.
-- [[https://www.pankajgodbole.com/publication/trajectory-optimisation-in-learned-multimodal-dynamical-systems-via-latent-ode-collocation/paper.pdf][\faBook published @ ICRA 2021]]
-- [[https://github.com/pankajgodbole/trajectory-optimisation-in-learned-multimodal-dynamical-systems][\faGithub pankajgodbole/trajectory-optimisation-in-learned-multimodal-dynamical-systems]]
-
-{{{cvtag(JAX)}}}
-{{{cvtag(Probabilistic geometries)}}}
-{{{cvtag(Optimal control)}}}
-
-*** SVGP :ignore:
+{{{cvevent(UPI Code Migration, Juspay, Sep 2019 - Mar 2021, Bengaluru\, India)}}}
+- Worked on migrating the company’s digital-payments services from PureScript (JavaScript) to Haskell
+{{{med-skip}}}
+{{{cvtag(Haskell)}}} {{{cvtag(Servant)}}} {{{cvtag(Streamly)}}} {{{cvtag(stack)}}} {{{cvtag(MySQL)}}} {{{cvtag(Intellij IDEA)}}} {{{cvtag(Docker)}}} {{{cvtag(BitBucket)}}}
+*** Web scraping and Data Extraction :ignore:
 {{{par-div}}}
-
-{{{cvevent(Identifiable Mixtures of Sparse Variational Gaussian Process Experts, University of Bristol, Sept 2018 - Ongoing, Pune\, India)}}}
-
-- Improving identifiability and scalability in the Mixtures of Gaussian Process Experts model with GP-based gating networks.
-- Variational inference based on sparse GP approximations.
--  [[https://github.com/pankajgodbole/mogpe][\faGithub pankajgodbole/mogpe]]
-
-{{{cvtag(GPflow)}}}
-{{{cvtag(TensorFlow)}}}
-{{{cvtag(Gaussian processes)}}}
-{{{cvtag(Variational inference)}}}
-
-*** GPJax :ignore:noexport:
-{{{div}}}
-
-{{{cvevent(Gaussian Processes in JAX (Code), Emacs, March 2021 - Ongoing, Pune\, India)}}}
-
-- Minimal Gaussian process library in JAX with a simple (custom) approach to state management.
-- \faGithub [[https://github.com/pankajgodbole/GPJax][pankajgodbole/GPJax]]
-
-{{{cvtag(Gaussian processes)}}}
-{{{cvtag(Variational inference)}}}
-{{{cvtag(JAX)}}}
-{{{cvtag(SVGP)}}}
+{{{cvevent(Web scraping and Data Extraction, Accrue Inc., Sep 2019 - Nov 2019, New York\, USA)}}}
+- Wrote code to scrape complex web-pages of financial news data, extract all information related to events and persist it to a Postgresql database.
+- Speed and accuracy were of paramount importance.
+{{{cvtag(Clojure)}}} {{{cvtag(Leiningen)}}} {{{cvtag(EDN)}}} {{{cvtag(Postgresql)}}}
+*** IOCoin HTML5 Wallet :ignore:
+{{{par-div}}}
+{{{cvevent(IOCoin HTML5 Wallet, IO Digital, Jul 2017 - Nov 2017, Miami\, USA)}}}
+- Worked on the UI for a Lite Client HD wallet system
+{{{cvtag(Node.js)}}} {{{cvtag(Electron)}}} {{{cvtag(C++)}}} {{{cvtag(Mithril)}}} {{{cvtag(Boost)}}}  {{{cvtag(blockchain)}}} {{{cvtag(cryptocurrency)}}} {{{cvtag(HD Wallet)}}}
+# {{{new-page}}}
+{{{new-line-big-skip}}}
+** Android apps
+*** Visitor Management System Android Tablet app :ignore:
+{{{cvevent(Visitor Management System Android Tablet app, Cogent Innovations Pvt Ltd, Oct 2015 - Jul 2017, Chennai\, India)}}}
+An advanced Android app for a Visitor Management System designed specifically for Android tablets. The app eliminates the need for pen and paper for gathering visitor information. It generates and prints the visitor badge, and also informs the office employee of the visitor waiting for them.
+- Designed and developed this app from the ground up as a "turn key" solution
+- \faLink [[https:///www.usetouchpoint.com/visitor-management.html][Cogent TouchPoint]]
+{{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(Volley)}}} {{{cvtag(Gson)}}}
+*** MealTango :ignore:
+{{{par-div}}}
+{{{cvevent(MealTango, Albatross Innovations, Jul 2015 - Oct 2015, Pune\, India)}}}
+MealTango is an app for a food ordering service. The app enables people interested in enjoying home-cooked meals to order fresh meals cooked by home chefs.
+- Designed, developed and deployed this app up as a "turn key" app
+- \faLink [[https://play.google.com/store/apps/details?id=com.mealtango.android][MealTango on Google Play]]
+{{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
+*** ShakeICE :ignore:
+{{{par-div}}}
+{{{cvevent(ShakeICE, Higher Order, May 2015 - Jun 2015, Pune\, India)}}}
+In case of an emergency this app enables the user to automatically alert preselected contacts via call and SMS. The app provides the user's current GPS coordinates and street location in the alert.
+- Designed and developed this app from the ground up as a service to the public
+- \faLink [[https://www.facebook.com/shakeiceandroid][ShakeICE on Google Play]]
+{{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
+*** Dogtainers Checklist App :ignore:
+{{{par-div}}}
+{{{cvevent(Dogtainers Checklist App, Dogtainers, Feb 2015 - May 2015, Melbourne\, Australia)}}}
+This app presents an extensive checklist for pet owners who wish to transport their pets. The user can select the requirements relevant to their pet's move set a date by which to complete each requirement and set up reminders using the Calendar.
+- Designed and developed this app including the UI, database, etc.
+- \faLink [[https://www.dogtainers.com.au/][Dogtainers, Australia]]
+{{{cvtag(SQLite)}}} {{{cvtag(AppCompat)}}} {{{cvtag(Preferences)}}}
+*** Crash Alarm :ignore:
+{{{par-div}}}
+{{{cvevent(Crash Alarm, G-Force, Oct 2014 - Dec 2014, Brisbane\, Australia)}}}
+This Android app is targeted at race-car drivers triggers an SMS alert if the driver crashed their car while racing.
+- Designed and developed this app including the UI, background service, etc.
+{{{cvtag(SQLite)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
 
 ** A day of my life :noexport:
 # #+begin_export latex
 # % \medskip
-
 # % \cvsection{A Day of My Life}
-
 # % % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
 # % % \wheelchart{outer radius}{inner radius}{
 # % % comma-separated list of value/text width/color/detail}
@@ -245,228 +210,94 @@ Worked on popular iOS and Android React Native apps
 # %   2/10em/accent/Sports and relaxation,
 # %   5/6em/accent!20/Spending time with family
 # % }
-
 # % % use ONLY \newpage if you want to force a page break for
 # % % ONLY the current column
 # % \newpage
 # #+end_export
 
-** Newpage :ignore:noexport:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
-
-** Volunteering
-*** FARSCOPE Course Rep :ignore:
-{{{cvevent(Cohort Representative, FARSCOPE CDT, Sept 2018 - Ongoing, Pune\, India)}}}
-# - I represent myself and fellow CDT students in management meetings where I communicate ideas and information between students and management.
-- Represent myself and my CDT peers in management meetings.
-- Communicate information between students and management.
-
-{{{cvtag(Communication)}}}
-{{{cvtag(Interpersonal Skills)}}}
-
-{{{par-div}}}
-
-*** Code Club :ignore:
-{{{cvevent(Club Leader, Code Club, Dec 2017 - April 2018, Junction 3 Library\, Bristol \, UK)}}}
-
-# - I collaborated with [[https://codeclub.org/en/][Code Club]] and Bristol Libraries to set up and run a Code Club for young people aged 9-13.
-# - Demonstrating my abi involved organising,  planning lessons and teaching
-- Set up (and then ran) a [[https://codeclub.org/en/][Code Club]] for children aged 9-13.
-- Led the organisation, planning and teaching of weekly lessons.
-- Planned lessons to engage children by making coding fun.
-- Extremely rewarding and reinforced my love for teaching.
-# - @ Junction 3 Library in Easton, Bristol.
-
-{{{cvtag(Leadership)}}}
-{{{cvtag(Teaching)}}}
-{{{cvtag(Communication)}}}
-{{{cvtag(Active listening)}}}
-
-*** Drivetrain :ignore:noexport:
-{{{par-div}}}
-
-{{{cvevent(Technical Lead (Drivetrain), Formula Student, Jan 2015 - Jan 2016, Pune\, India)}}}
-
-Each year, as part of Formula Student, students design, build and race a single seat race car.
-- Finished 2nd in the National Class 2 competition in 2013/2014, I was then selected as the Drivetrain lead.
-- This role improved my communication skills as I was leading weekly presentations.
-- I developed my leadership skills through setting realistic objectives, effectively allocating work to the appropriate team members and monitoring outcomes.
-
-{{{cvtag(Teamwork)}}}
-{{{cvtag(Leadership)}}}
-{{{cvtag(Time Management)}}}
-
-*** Snowboard Captain :ignore:noexport:
-{{{par-div}}}
-
-{{{cvevent(Snowboard Captain, University of Bristol Snowsports Club, Jan 2014 - Sept 2015, Pune\, India)}}}
-
-- Organised multiple weekly training sessions, demonstrating my ability to plan and run events smoothly.
-- Negotiated competitive prices for a growing member base within an inherently expensive sport.
-- Responsible for aiding the smooth running of the club and helping to organise the annual university ski trip, with circa 1500 participants, working under pressure to manage people in high stress situations.
-- Awarded the ‘Team of the Year’ award and full colours for my performances and contributions to the sport.
-
-{{{cvtag(Teamwork)}}}
-{{{cvtag(Leadership)}}}
-{{{cvtag(Time Management)}}}
-
-** Talks
-*** Geometry Talk :ignore:
-{{{cvevent(Synergising Bayesian Inference and Probabilistic Geometries for Robotic Control, Cognitive Systems - Technical University of Denmark (DTU), 18 March 2021, Zoom)}}}
-# - Presented a method for controlling multimodal dynamical systems synergising Bayesian inference and probabilistic geometries.
-- Presented a method that synergises Bayesian inference and probabilistic geometries to control multimodal dynamical systems.
-
-{{{cvtag(Communication)}}}
-{{{cvtag(Probabilistic geometries)}}}
-{{{cvtag(Gaussian processes)}}}
-
-** Publications
-#+begin_export latex
-\nocite{*}
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-% \divider
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-% \divider
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-#+end_export
+# ** Newpage :ignore:noexport:
+# #+BEGIN_EXPORT latex
+# \newpage
+# #+END_EXPORT
 
 * CV Column 2 :ignore:
 # Switch to the right column - will automatically move to the next page.
 #+begin_export latex
 \switchcolumn
 #+end_export
-
 ** Skills
 *** Languages :ignore:
 {{{cvtag(Clojure)}}}
 {{{cvtag(Java)}}}
 {{{cvtag(C++)}}}
 *** Front-end :ignore:
-{{{new-line-med-skip}}}
+{{{new-line-big-skip}}}
 {{{cvtag(ClojureScript)}}}
 {{{cvtag(React Native)}}}
 *** Back-end :ignore:
-{{{new-line-med-skip}}}
+{{{new-line-big-skip}}}
 {{{cvtag(SQL)}}}
 {{{cvtag(REST)}}}
 *** Dev-ops :ignore:
-{{{new-line-med-skip}}}
+{{{new-line-big-skip}}}
 {{{cvtag(git)}}}
 {{{cvtag(GitHub)}}}
 {{{cvtag(AWS)}}}
 {{{cvtag(Docker)}}}
 *** Design :ignore:
-{{{new-line-med-skip}}}
-{{{cvtag(UI)}}}
+{{{new-line-big-skip}}}
 {{{cvtag(Single page applications)}}}
 {{{cvtag(Material Design)}}}
+{{{cvtag(UI)}}}
 *** Software Engineering :ignore:
-{{{new-line-med-skip}}}
+{{{new-line-big-skip}}}
 {{{cvtag(TDD)}}}
 {{{cvtag(Functional programming)}}}
 {{{cvtag(OOP)}}}
 *** Project Management :ignore:
-{{{new-line-med-skip}}}
+{{{new-line-big-skip}}}
 {{{cvtag(Project management)}}}
+# {{{cvtag(Fortune 500)}}}
 {{{cvtag(Startups)}}}
-{{{cvtag(Fortune 500)}}}
+{{{new-line-big-skip}}}
+** Online Presence
+#+begin_export latex
+\homepage{pankajgodbole.github.io}
+\newline \medskip
+\github{pankajgodbole}
+\newline \medskip
+\linkedin{pankajgodbole}}
+#+end_export
+{{{new-page}}}
 ** Education
-{{{new-line-med-skip}}}
-{{{big-skip}}}
-{{{cvevent(PhD\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
+{{{cvevent(MS\ in Computer Engineering, Oregon State University, 2004)}}}
 {{{div}}}
-{{{cvevent(Gaussian Process and Uncertainty Quantification Summer School (GPSS), University of Sheffield, Sept 2019 - Sept 2019,)}}}
-{{{div}}}
-{{{cvevent(Machine Learning Summer School Moscow (MLSS), Skoltech, Aug 2019 - Sept 2019,)}}}
-{{{div}}}
-
-# {{{cvevent(M.Res.\ in Robotics \& Autonomous Systems, University of Bristol | First Class Honours, Sept 2017 -- Sept 2018,)}}}
-# {{{cvevent(a \footnote{Not official - will be awarded if Ph.D. is not completed.} M.Res.\ in Robotics \& Autonomous Systems,University of Bristol,Sept 2017 -- Sept 2018,)}}}
-#+BEGIN_EXPORT latex
-\cvevent{\footnote{Not official - awarded if Ph.D. is not completed.} MRes in Robotics \& Autonomous Systems}{University of Bristol | First Class Honours}{Sept 2017 -- Sept 2018}{}
-#+END_EXPORT
-# - First Class Honours
-- \faBook [[https://www.pankajscannell.com/project/uncertain-agentspeak/][Extending BDI Agents to Model and Reason with Uncertainty]]
-
-
-{{{div}}}
-
-{{{cvevent(MEng in Mechanical Engineering, University of Bristol | First Class Honours, Sept 2012 -- June 2016,)}}}
-# - First Class Honours \\
-- Graduated in top 10% of cohort
-
-** Newpage :ignore:
-#+BEGIN_EXPORT latex
-\newpage
-#+END_EXPORT
-
-** My Life Philosophy :noexport:
+{{{cvevent(BE in Electronics and Communication Engineering, Shivaji University, 1997)}}}
+** Languages
 #+begin_export latex
-% \begin{quote}
-% ``Something smart or heartfelt, preferably in one sentence.''
-% \end{quote}
-#+end_export
-
-# ** Most Proud Of :ignore:
-# #+begin_export latex
-# \cvsection{Most Proud of}
-# #+end_export
-
-# #+begin_export latex
-# \cvachievement{\faTrophy}{Code Club Leader}{Collaborated with Code Club and Bristol Libraries to set up and run a Code Club for 9-13 year olds.}
-# #+end_export
-
-# #+begin_export latex
-# \divider
-
-# \cvachievement{\faHeartbeat}{British University Snowboard Slalom Champion}{Won all national British university slalom competitions in 2017-2018.}
-# #+end_export
-
-** Achievements
-{{{cvachievement(\faTrophy, Full Sporting Colours, Awarded full colours for outstanding achievements in snowboarding. Multiple gold medals in British University Snowboard Championships.)}}}
-
-{{{div}}}
-
-{{{cvachievement(\faCertificate, Starting To Teach, Establish myself as a confident\, enthusiastic and effective teacher who is able to engage\, encourage and develop students' learning.)}}}
-
-{{{div}}}
-
-{{{cvachievement(\faTrophy,Bristol Plus Award, For undertaking a wide range of tasks to further enhance student skills - only 700 out of 23\,000 achieved this award per annum.)}}}
-
-{{{div}}}
-
-{{{cvachievement(\faCertificate, Mary Jones Prize for Mathematics, For outstanding achievements in A Level mathematics @ Ripon Grammar School)}}}
-
-** Languages :noexport:
-#+begin_export latex
-% \cvsection{Languages}
-
-% \cvskill{English}{5}
-% \divider
-
-% \cvskill{Spanish}{4}
-% \divider
-
-% \cvskill{German}{3}
-
-% %% Yeah I didn't spend too much time making all the
-% %% spacing consistent... sorry. Use \smallskip, \medskip,
-% %% \bigskip, \vpsace etc to make ajustments.
-% \med-skip
-#+end_export
-
-\newpage
-** Referees
-#+begin_export latex
-% \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Arthur Richards}{University of Bristol}{arthur.richards@bristol.ac.uk}
-% {Address Line 1\\Address line 2}
+\cvskill{English}{5}
 \divider
-\cvref{Dr.\ Carl Henrik Ek}{University of Cambridge}{che29@cam.ac.uk}
-% {Address Line 1\\Address line 2}
+\cvskill{Marathi}{4}
+\divider
+\cvskill{Hindi}{3}
+\divider
+\cvskill{Urdu}{3}
+\divider
+\cvskill{Tamil}{2}
 #+end_export
+{{{new-line-big-skip}}}
+** Volunteering
+*** Ananda Sangha :ignore:
+{{{cvevent(Ananda Sangha)}}}
+# ** Referees
+# #+begin_export latex
+# % \cvref{name}{email}{mailing address}
+# \cvref{Prof.\ Arthur Richards}{University of Bristol}{arthur.richards@bristol.ac.uk}
+# % {Address Line 1\\Address line 2}
+# \divider
+# \cvref{Dr.\ Carl Henrik Ek}{University of Cambridge}{che29@cam.ac.uk}
+# % {Address Line 1\\Address line 2}
+# #+end_export
 
 * Back Matter :ignore:
 #+begin_export latex
