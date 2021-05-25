@@ -1,4 +1,5 @@
 *.tex
 *.pdf
 *.xmpi
-*~         # Emacs backup files
+.*~         # Emacs backup files
+.#          # Emacs backup files
