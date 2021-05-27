@@ -161,41 +161,54 @@ Worked on native mobile apps using React Native apps
 {{{cvtag(Node.js)}}} {{{cvtag(Electron)}}} {{{cvtag(C++)}}} {{{cvtag(Mithril)}}} {{{cvtag(Boost)}}}  {{{cvtag(blockchain)}}} {{{cvtag(cryptocurrency)}}} {{{cvtag(HD Wallet)}}}
 # {{{new-page}}}
 {{{new-line-big-skip}}}
+{{{new-page}}}
 ** Android apps
 *** Visitor Management System Android Tablet app :ignore:
 {{{cvevent(Visitor Management System Android Tablet app, Cogent Innovations Pvt Ltd, Oct 2015 - Jul 2017, Chennai\, India)}}}
 An advanced Android app for a Visitor Management System designed specifically for Android tablets. The app eliminates the need for pen and paper for gathering visitor information. It generates and prints the visitor badge, and also informs the office employee of the visitor waiting for them.
-- Designed and developed this app from the ground up as a "turn key" solution
+# - Designed and developed this app from the ground up as a "turn key" solution
 - \faLink [[https:///www.usetouchpoint.com/visitor-management.html][Cogent TouchPoint]]
 {{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(Volley)}}} {{{cvtag(Gson)}}}
 *** MealTango :ignore:
 {{{par-div}}}
 {{{cvevent(MealTango, Albatross Innovations, Jul 2015 - Oct 2015, Pune\, India)}}}
 MealTango is an app for a food ordering service. The app enables people interested in enjoying home-cooked meals to order fresh meals cooked by home chefs.
-- Designed, developed and deployed this app up as a "turn key" app
+# - Designed, developed and deployed this app up as a "turn key" app
 - \faLink [[https://play.google.com/store/apps/details?id=com.mealtango.android][MealTango on Google Play]]
 {{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
 *** ShakeICE :ignore:
 {{{par-div}}}
 {{{cvevent(ShakeICE, Higher Order, May 2015 - Jun 2015, Pune\, India)}}}
 In case of an emergency this app enables the user to automatically alert preselected contacts via call and SMS. The app provides the user's current GPS coordinates and street location in the alert.
-- Designed and developed this app from the ground up as a service to the public
+# - Designed and developed this app from the ground up as a service to the public
 - \faLink [[https://www.facebook.com/shakeiceandroid][ShakeICE on Google Play]]
 {{{cvtag(Android Material Design)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
 *** Dogtainers Checklist App :ignore:
 {{{par-div}}}
 {{{cvevent(Dogtainers Checklist App, Dogtainers, Feb 2015 - May 2015, Melbourne\, Australia)}}}
 This app presents an extensive checklist for pet owners who wish to transport their pets. The user can select the requirements relevant to their pet's move set a date by which to complete each requirement and set up reminders using the Calendar.
-- Designed and developed this app including the UI, database, etc.
+# - Designed and developed this app including the UI, database, etc.
 - \faLink [[https://www.dogtainers.com.au/][Dogtainers, Australia]]
 {{{cvtag(SQLite)}}} {{{cvtag(AppCompat)}}} {{{cvtag(Preferences)}}}
 *** Crash Alarm :ignore:
 {{{par-div}}}
 {{{cvevent(Crash Alarm, G-Force, Oct 2014 - Dec 2014, Brisbane\, Australia)}}}
 This Android app is targeted at race-car drivers triggers an SMS alert if the driver crashed their car while racing.
-- Designed and developed this app including the UI, background service, etc.
+# - Designed and developed this app including the UI, background service, etc.
 {{{cvtag(SQLite)}}} {{{cvtag(AppCompat)}}} {{{cvtag(accelerometer)}}}
-
+{{{new-page}}}
+** Academic Projects
+*** Optimizing the Advanced Encryption Standard (AES) - MS Dissertation project :ignore:
+{{{cvevent(Optimizing the Advanced Encryption Standard - MS Dissertation project, Oregon State University, Apr 2003 - Jan 2004)}}}
+- Implemented an optimized version of the AES, achieving 68% speed-up over the then-available implementation
+- Employed fast algorithm, efficient data structures, optimal coding techniques and SSE (Streaming SIMD Extensions) instructions resulting in maximum speed of execution
+{{{cvtag(C)}}} {{{cvtag(GNU debugger)}}} {{{cvtag(AES)}}} {{{cvtag(Intel Architecture)}}} {{{cvtag(SSE)}}} {{{cvtag(SIMD)}}}
+*** Secure Hashing Algorithm (SHA)- Network Security course project :ignore:
+{{{par-div}}}
+{{{cvevent(Secure Hashing Algorithm (SHA) - Network Security course project, Oregon State University, Sep 2019 - Mar 2021, Corvallis OR\, USA)}}}
+- Implemented SHA-1 and researched the role of HMAC-SHA-256-128 algorithm in IPSec standard
+{{{med-skip}}}
+{{{cvtag(C)}}} {{{cvtag(SHA-1)}}} {{{cvtag(Red Hat Linux)}}} {{{cvtag(make)}}} {{{cvtag(GCC)}}} {{{cvtag(GDB)}}} {{{cvtag(Emacs)}}}
 ** A day of my life :noexport:
 # #+begin_export latex
 # % \medskip
