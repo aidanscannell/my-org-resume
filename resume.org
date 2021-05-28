@@ -199,16 +199,24 @@ This Android app is targeted at race-car drivers triggers an SMS alert if the dr
 {{{new-page}}}
 ** Academic Projects
 *** Optimizing the Advanced Encryption Standard (AES) - MS Dissertation project :ignore:
-{{{cvevent(Optimizing the Advanced Encryption Standard - MS Dissertation project, Oregon State University, Apr 2003 - Jan 2004)}}}
+{{{cvevent(Optimizing the Advanced Encryption Standard, Oregon State University, Apr 2003 - Jan 2004)}}}
+- MS Dissertation project
 - Implemented an optimized version of the AES, achieving 68% speed-up over the then-available implementation
 - Employed fast algorithm, efficient data structures, optimal coding techniques and SSE (Streaming SIMD Extensions) instructions resulting in maximum speed of execution
 {{{cvtag(C)}}} {{{cvtag(GNU debugger)}}} {{{cvtag(AES)}}} {{{cvtag(Intel Architecture)}}} {{{cvtag(SSE)}}} {{{cvtag(SIMD)}}}
 *** Secure Hashing Algorithm (SHA)- Network Security course project :ignore:
 {{{par-div}}}
-{{{cvevent(Secure Hashing Algorithm (SHA) - Network Security course project, Oregon State University, Sep 2019 - Mar 2021, Corvallis OR\, USA)}}}
+{{{cvevent(Secure Hashing Algorithm (SHA), Oregon State University, Sep 2019 - Mar 2021, Corvallis OR\, USA)}}}
+- Network Security course project
 - Implemented SHA-1 and researched the role of HMAC-SHA-256-128 algorithm in IPSec standard
 {{{med-skip}}}
 {{{cvtag(C)}}} {{{cvtag(SHA-1)}}} {{{cvtag(Red Hat Linux)}}} {{{cvtag(make)}}} {{{cvtag(GCC)}}} {{{cvtag(GDB)}}} {{{cvtag(Emacs)}}}
+*** Speaker (Person) Verification using Power Density Spectrum - BE Degree project :ignore:
+{{{par-div}}}
+{{{cvevent(Speaker (Voice) Verification using Power Density Spectrum, Shivaji University, Jan 1997 - May 1997, Kolhpur MH\, India)}}}
+- BE Degree project
+{{{med-skip}}}
+{{{cvtag(C)}}} {{{cvtag(Digital Signal Processing)}}} {{{cvtag(Fast Fourier Transform)}}}
 ** A day of my life :noexport:
 # #+begin_export latex
 # % \medskip
