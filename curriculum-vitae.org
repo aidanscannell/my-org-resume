@@ -97,10 +97,16 @@
 #+begin_export latex
 \begin{paracol}{2}
 #+end_export
-** Personal Statement :ignore:
+** Personal Statement Secondmind :ignore:noexport:
 #+begin_export latex
  \begin{quote}
  ``I am an aspiring researcher with interests at the intersection of probabilistic machine learning and control theory. I am particularly interested in uncertainty quantification and as a result, a great deal of my work focuses on Bayesian non-parametric methods, specifically Gaussian processes and variational inference.''
+ \end{quote}
+#+end_export
+** Personal Statement Amazon :ignore:
+#+begin_export latex
+ \begin{quote}
+ ``I am a PhD researcher with interests at the intersection of probabilistic machine learning and control theory. A great deal of my work focuses on Bayesian non-parametric methods, specifically Gaussian processes, variational inference and decision-making under uncertainty.''
  \end{quote}
 #+end_export
 ** Experience
@@ -169,7 +175,7 @@ Alongside my PhD I have assisted teaching:
 #+end_export
 
 ** Projects
-*** Active Learning :ignore:
+*** Active Learning Secondmind :ignore:noexport:
 
 # {{{cvevent(Investigating Exploration-Exploitation in Multimodal Dynamical Systems (Academic), University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
 {{{cvevent(Exploration of Operatable Dynamics Modes in Multimodal Dynamical Systems, University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
@@ -180,6 +186,18 @@ Alongside my PhD I have assisted teaching:
 
 # {{{cvtag(JAX)}}}
 {{{cvtag(Bayesian optimisation)}}}
+{{{cvtag(Gaussian processes)}}}
+{{{cvtag(Optimal control)}}}
+
+*** Active Learning :ignore:
+
+# {{{cvevent(Investigating Exploration-Exploitation in Multimodal Dynamical Systems (Academic), University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
+{{{cvevent(Optimal Control in Multimodal Dynamical Systems as Probabilistic Inference, University of Bristol, May 2021 - Ongoing, Bristol\, UK)}}}
+
+- Developing data-efficient techniques for exploration in multimodal dynamical systems.
+- The goal of this project is to explore a single dynamics mode that is known to be operatable whilst avoiding other modes.
+
+{{{cvtag(Variational inference)}}}
 {{{cvtag(Gaussian processes)}}}
 {{{cvtag(Optimal control)}}}
 
@@ -353,6 +371,7 @@ Each year, as part of Formula Student, students design, build and race a single 
 
 ** Education
 {{{cvevent(PhD\ in Bayesian Machine Learning for Robotic Control, University of Bristol, Sept 2018 - Ongoing,)}}}
+- \faBook Probabilistic Inference for Learning and Control in Multimodal Dynamical Systems
 
 {{{divider}}}
 
